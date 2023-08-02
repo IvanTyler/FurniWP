@@ -1,0 +1,25 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.header {
+    &__logo-link {
+        grid-area: logo;
+    }
+    &__request {
+        grid-area: button;
+        .button();
+        background-color: @var-mainColor;
+        color: #fff;
+    }
+}
+
+.container-header {
+    grid-template-areas: 'logo nav-menu button';
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    max-width: 1760px;
+}

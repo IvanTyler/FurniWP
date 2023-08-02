@@ -1,0 +1,54 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+}
+.services-furni {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  grid-template-areas: 'circle title' 'circle description';
+  gap: 8px 24px;
+  padding: 32px 40px;
+  border-radius: 20px;
+  border: 2px solid #E4E8F7;
+  background-color: #FFF;
+}
+.services-furni__circle {
+  grid-area: circle;
+  display: flex;
+  width: 88px;
+  height: 88px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #E4E8F7;
+}
+.services-furni__title {
+  grid-area: title;
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 24px;
+  line-height: 27px;
+}
+.services-furni__description {
+  grid-area: description;
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.services-item_1 {
+  grid-area: services-item_1;
+}
+.services-item_2 {
+  grid-area: services-item_2;
+}

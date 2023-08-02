@@ -1,5 +1,3 @@
-@import url('./mixins/main.less');
-
 * {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
@@ -16,73 +14,37 @@ body {
     height: 100%;
 }
 
+.wrapper-main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .main {
+    margin-top: 48px;
     flex: 1 1 auto;
-    margin-top: 26px;
+}
 
-    @media (max-width: 630px) {
-        margin-top: 66px;
+.container {
+    max-width: 1280px;
+    padding: 0 60px;
+    margin: 0 auto;
+
+    @media (max-width: 1030px) {
+        padding: 0 48px;
     }
 }
 
-.main.hidden {
-    @media (max-width: 930px) {
-        display: none;
-    }
-}
-
-@import url('../css/main-fonts.css');
-
-@import url('./wrapper-main.less');
-@import url('./container-main.less');
+@import url('../css/fonts/fonts.css');
 
 @import url('./header.less');
-@import url('./header-fixed-tools-page-kithen.less');
+@import url('./header-nav-menu.less');
 
-@import url('./main-section.less');
-@import url('./gallery-scroll-behavior.less');
+@import url('./apartment-transformation-service.less');
 
-@import url('./section-techniques.less');
+@import url('./services.less');
+@import url('./service-furni.less');
+@import url('./services-furni.less');
 
-@import url('./section-bread-crumbs.less');
-@import url('./bread-crumbs-nav-menu-list.less');
 
-@import url('./section-banner.less');
-@import url('./section-pagination-products.less');
 
-@import url('./section-additional-product-information.less');
-@import url('./additional-product-information-list.less');
-
-@import url('./section-additional-product-information-list-products.less');
-@import url('./section-detailed-page-description-about-product.less');
-@import url('./section-detailed-page-description-about-product-images.less');
-
-@import url('./article-detailed-page-description-about-product-sidebar.less');
-@import url('./article-detailed-page-description-about-product-sidebar-list-select-color.less');
-@import url('./article-detailed-page-description-about-product-sidebar-list-options.less');
-@import url('./article-detailed-page-description-about-product-sidebar-add-to-basket.less');
-
-@import url('./section-detailed-page-description-about-product-tabs-list.less');
-@import url('./section-detailed-page-description-about-product-constructor.less');
-@import url('./section-detailed-page-description-about-product-tab-info.less');
-@import url('./section-detailed-page-description-about-product-characteristics.less');
-@import url('./section-detailed-page-description-about-product-reviews.less');
-@import url('./section-detailed-page-description-about-product-question-answer.less');
-@import url('./section-detailed-page-description-about-product-tab-content.less');
-
-@import url('./section-see-kithen-in-interior.less');
-@import url('./section-detailed-page-description-about-product-chapter.less');
-
-@import url('./additional-information-list-products-tools.less');
-
-@import url('./sort-elements-block-page-product.less');
-@import url('./sort-elements-block-list.less');
-
-@import url('./section-special-offers.less');
-@import url('./section-special-offers-banners.less');
-@import url('./section-recently-watched.less');
-
-@import url('./modal-main.less');
-@import url('./article-modal-sidebar.less');
-
-@import url('./footer.less');

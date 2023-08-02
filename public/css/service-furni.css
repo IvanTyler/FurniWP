@@ -1,0 +1,38 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+}
+.service-furni {
+  grid-area: service;
+  padding: 32px 40px;
+  border-radius: 20px;
+  border: 2px solid #E4E8F7;
+  background-color: #FFF;
+}
+.service-furni__title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  line-height: 126%;
+}
+.service-furni__sub-title {
+  margin-top: 16px;
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 24px;
+  line-height: 27px;
+  font-weight: 400;
+}
+.service-furni__img {
+  margin-top: 44px;
+  width: 100%;
+}

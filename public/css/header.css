@@ -1,0 +1,42 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+}
+.header__logo-link {
+  grid-area: logo;
+}
+.header__request {
+  grid-area: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  background-color: #CE1A30;
+  color: #fff;
+}
+.container-header {
+  grid-template-areas: 'logo nav-menu button';
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  max-width: 1760px;
+}

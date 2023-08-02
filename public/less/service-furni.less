@@ -1,0 +1,31 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.service-furni {
+    grid-area: service;
+    padding: 32px 40px;
+    border-radius: 20px;
+    border: 2px solid #E4E8F7;
+    background-color: #FFF;
+
+    &__title {
+        color: #11172E;
+        font-family: @var-mainFont;
+        font-size: 46px;
+        line-height: 126%;
+    }
+
+    &__sub-title {
+        margin-top: 16px;
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 24px;
+        line-height: 27px;
+        font-weight: 400;
+    }
+
+    &__img {
+        margin-top: 44px;
+        width: 100%;
+    }
+}

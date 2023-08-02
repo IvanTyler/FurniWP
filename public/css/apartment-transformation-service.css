@@ -1,0 +1,72 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+}
+.apartment-transformation-service {
+  padding-bottom: 88px;
+}
+.apartment-transformation-service__title {
+  grid-area: title;
+  color: #11172E;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 68px;
+  line-height: 71px;
+}
+@media (max-width: 1030px) {
+  .apartment-transformation-service__title {
+    font-size: 56px;
+    line-height: 59px;
+  }
+}
+@media (max-width: 630px) {
+  .apartment-transformation-service__title {
+    font-size: 32px;
+    line-height: 35px;
+  }
+}
+.apartment-transformation-service__text {
+  color: #CE1A30;
+  font-family: 'FuturaPT';
+}
+.apartment-transformation-service__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.apartment-transformation-service__wrapper-img {
+  height: 600px;
+  border-radius: 20px;
+  grid-area: wrapper-img;
+}
+@media (max-width: 630px) {
+  .apartment-transformation-service__wrapper-img {
+    height: 390px;
+  }
+}
+@media (max-width: 500px) {
+  .apartment-transformation-service__wrapper-img {
+    height: 340px;
+  }
+}
+.container-apartment-transformation {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: 'title' 'wrapper-img';
+  gap: 48px;
+}
+@media (max-width: 630px) {
+  .container-apartment-transformation {
+    grid-template-areas: 'wrapper-img' 'title';
+  }
+}

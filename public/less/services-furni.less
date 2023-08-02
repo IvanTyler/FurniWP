@@ -1,0 +1,51 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.services-furni {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    grid-template-areas:
+        'circle title'
+        'circle description';
+    gap: 8px 24px;
+    padding: 32px 40px;
+    border-radius: 20px;
+    border: 2px solid #E4E8F7;
+    background-color: #FFF;
+
+    &__circle {
+        grid-area: circle;
+        display: flex;
+        width: 88px;
+        height: 88px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #E4E8F7;
+    }
+
+    &__title {
+        grid-area: title;
+        color: #11172E;
+        font-family: @var-mainFont;
+        font-size: 24px;
+        line-height: 27px;
+    }
+
+    &__description {
+        grid-area: description;
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21px;
+    }
+}
+
+.services-item_1 {
+    grid-area: services-item_1;
+}
+
+.services-item_2 {
+    grid-area: services-item_2;
+}

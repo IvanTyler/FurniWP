@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+}
+.services {
+  background-color: #EFF2FD;
+  padding: 88px 0px;
+}
+.container-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'service services-item_1' 'service services-item_2';
+  gap: 40px;
+}

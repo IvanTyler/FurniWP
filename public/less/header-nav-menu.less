@@ -1,0 +1,17 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.header-nav-menu {
+    grid-area: nav-menu;
+    display: flex;
+    justify-self: end;
+    gap: 32px;
+
+    &__link {
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+}
