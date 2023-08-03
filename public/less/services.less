@@ -13,4 +13,12 @@
         'service services-item_1'
         'service services-item_2';
     gap: 40px;
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'service'
+            'services-item_1'
+            'services-item_2';
+    }
 }
