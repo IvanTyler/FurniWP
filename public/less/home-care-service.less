@@ -1,0 +1,312 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.home-care-service {
+    background-color: #0E0F12;
+
+    &__title {
+        grid-area: title;
+        justify-self: center;
+        color: #F0F0F0;
+        font-family: @var-mainFont;
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 126%;
+    }
+
+    &__button {
+        justify-self: center;
+        grid-area: button;
+        .button();
+        background-color: @var-mainColor;
+        color: #fff;
+    }
+}
+
+.container-home-care-service {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1284px;
+    grid-template-areas:
+        'title title'
+        'furnishing furnishing'
+        'unique-interior-design renovation'
+        'button button';
+    gap: 40px;
+}
+
+.home-care-service-furni {
+    display: grid;
+    padding: 43px 32px;
+    border-radius: 20px;
+    border: 2px solid #323540;
+    background-color: #262830;
+
+    &__title {
+        grid-area: title;
+        color: #F0F0F0;
+        font-family: @var-mainFont;
+        font-size: 24px;
+        line-height: 27px;
+    }
+
+    &__title.furnishing {
+        grid-area: title-furnishing;
+    }
+
+    &__title.renovation {
+        grid-area: title-renovation;
+    }
+
+    &__img.isometric {
+        grid-area: isometric;
+        justify-self: center;
+    }
+
+    &__img.ladder {
+        grid-area: ladder;
+        width: 257px;
+        margin-top: -46px;
+    }
+
+    &__img.plan {
+        position: absolute;
+        top: -56px;
+        left: -40px;
+        grid-area: plan;
+        justify-self: start;
+    }
+
+    &__img.ladder {}
+
+    &__description-wrapper {
+        display: flex;
+        grid-area: description-wrapper;
+        justify-content: space-between;
+        align-items: start;
+        gap: 4px;
+        margin-top: 16px;
+    }
+
+    &__price-wrapper {
+        position: relative;
+        display: grid;
+        grid-template-areas:
+            'price plan';
+        grid-template-columns: 1fr 1fr;
+        grid-area: price-wrapper;
+    }
+
+    &__description {
+        color: #E0E0E0;
+        font-family: @var-mainFont;
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    &__description-renovation {
+        display: flex;
+        grid-area: description-renovation-block;
+    }
+
+    &__description.renovation {
+        margin-right: -80px;
+        align-self: start;
+    }
+
+    &__learn-more {
+        font-family: @var-mainFont;
+        font-size: 16px;
+        line-height: 19px;
+        color: #F7921C;
+        border-bottom: 1px solid;
+    }
+
+    &__price {
+        display: grid;
+        grid-area: price;
+        grid-template-columns: max-content max-content;
+        grid-template-rows: min-content min-content;
+        grid-template-areas:
+            'price-title price-title'
+            'current-price old-price';
+        margin-top: -15px;
+        gap: 3px;
+        align-self: center;
+        color: #E0E0E0;
+        font-family: @var-mainFont;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+
+    &__price-title,
+    &__old-price,
+    &__current-price {
+        grid-area: price-title;
+        font-family: @var-mainFont;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+
+    &__current-price {
+        grid-area: current-price;
+    }
+
+    &__old-price {
+        grid-area: old-price;
+        text-decoration: line-through;
+    }
+}
+
+.home-care-service-furni.furnishing {
+    grid-area: furnishing;
+    grid-template-columns: minmax(auto, 366px) minmax(auto, 245px) minmax(auto, 366px);
+    grid-template-rows: min-content min-content min-content;
+    grid-template-areas:
+        'title-furnishing isometric costs-excluding'
+        'furnishing-list isometric costs-excluding'
+        'furnishing-list isometric costs-excluding';
+    gap: 16px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-care-service-furni.unique-interior-design {
+    display: flex;
+    flex-direction: column;
+    grid-area: unique-interior-design;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        'title title'
+        'description-wrapper description-wrapper'
+        'price-wrapper price-wrapper'
+        'get-design-project get-design-project';
+}
+
+.home-care-service-furni.renovation {
+    position: relative;
+    grid-area: renovation;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        'title-renovation title-renovation'
+        'description-renovation-block description-renovation';
+    gap: 16px 0;
+
+}
+
+.furnishing-list {
+    display: grid;
+    align-self: start;
+    grid-area: furnishing-list;
+    gap: 16px;
+
+    &__item {
+        display: grid;
+        grid-template-columns: 26px 1fr;
+        grid-template-areas:
+            'number text'
+            'number text';
+        gap: 12px;
+    }
+
+    &__number {
+        grid-area: number;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 26px;
+        height: 26px;
+        border-radius: 32px;
+        background-color: #444755;
+        color: #E0E0E0;
+        font-family: @var-mainFont;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    &__text {
+        grid-area: text;
+        color: #E0E0E0;
+        font-family: @var-mainFont;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+}
+
+.costs-excluding {
+    display: grid;
+    grid-area: costs-excluding;
+    grid-template-areas:
+        'title title'
+        'costs-excluding-furniture-list sofa';
+    gap: 12px 0;
+    padding: 20px 24px;
+    border-radius: 12px;
+    background-color: #323540;
+
+    &__title {
+        max-width: 225px;
+        grid-area: title;
+        color: #F0F0F0;
+        font-family: @var-mainFont;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+    }
+
+    &__img {
+        grid-area: sofa;
+    }
+}
+
+.costs-excluding-furniture-list {
+    display: grid;
+    grid-area: costs-excluding-furniture-list;
+    gap: 4px;
+    min-width: 145px;
+
+    &__item {
+        color: #E0E0E0;
+        font-family: @var-mainFont;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+.costs-excluding-furniture {
+
+    &__item {}
+}
+
+.sofa {}
+
+.palette {}
+
+.plan {}
+
+.get-design-project {
+    grid-area: get-design-project;
+    display: flex;
+    margin-top: auto;
+    padding: 16px 24px 16px 16px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 12px;
+    background-color: #323540;
+    height: 70px;
+
+    &__text {
+        color: #F0F0F0;
+        font-family: @var-mainFont;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+}
+
+.ladder {}
+
+.furnishing {}

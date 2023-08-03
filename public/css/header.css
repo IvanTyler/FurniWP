@@ -10,6 +10,7 @@
   font-weight: 500;
   line-height: 17px;
   border-radius: 88px;
+  cursor: pointer;
 }
 .header__logo-link {
   grid-area: logo;
@@ -27,6 +28,7 @@
   font-weight: 500;
   line-height: 17px;
   border-radius: 88px;
+  cursor: pointer;
   background-color: #CE1A30;
   color: #fff;
 }

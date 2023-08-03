@@ -10,10 +10,10 @@
   font-weight: 500;
   line-height: 17px;
   border-radius: 88px;
+  cursor: pointer;
 }
 .services {
   background-color: #EFF2FD;
-  padding: 88px 0px;
 }
 .container-services {
   display: grid;
