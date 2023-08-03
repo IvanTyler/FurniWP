@@ -1,0 +1,22 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.container-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(25% - 40px), 1fr));
+    gap: 40px;
+
+    @media (max-width: 1250px) {
+        grid-template-columns: repeat(auto-fill, minmax(calc(33.333% - 32px), 1fr));
+        gap: 40px 32px;
+    }
+
+    @media (max-width: 815px) {
+        grid-template-columns: repeat(auto-fill, minmax(calc(50% - 32px), 1fr));
+    }
+
+    @media (max-width: 530px) {
+        grid-template-columns: repeat(auto-fill, minmax(calc(100% - 12px), 1fr));
+        gap: 32px 12px;
+    }
+}

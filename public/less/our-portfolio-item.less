@@ -1,0 +1,57 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.our-portfolio-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+
+    &__img {
+        height: 180px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 16px 16px 0 0;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        padding: 0 20px;
+        border-radius: 0 0 16px 16px;
+        border-right: 2px solid #E4E8F7;
+        border-bottom: 2px solid #E4E8F7;
+        border-left: 2px solid #E4E8F7;
+        background-color: #EFF2FD;
+    }
+
+    &__name {
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 126%;
+    }
+
+    &__circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background-color: #fff;
+
+        @media (max-width: 600px) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__icon {
+        @media (max-width: 600px) {
+            height: 10px;
+        }
+    }
+}
