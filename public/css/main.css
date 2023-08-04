@@ -1190,3 +1190,38 @@ body {
   cursor: pointer;
   color: #fff;
 }
+.footer {
+  border-top: 1px solid #E4E8F7;
+  background-color: #EFF2FD;
+}
+.container-footer {
+  display: grid;
+  grid-template-columns: 88px minmax(auto, 265px) minmax(auto, 265px) minmax(auto, 265px);
+  gap: 40px 88px;
+}
+.social-media {
+  display: flex;
+  margin-top: 32px;
+  gap: 8px;
+}
+.footer-nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-nav-menu__item:first-child {
+  color: #B3B9D1;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 126%;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+}
+.footer-nav-menu__link {
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 148%;
+}
