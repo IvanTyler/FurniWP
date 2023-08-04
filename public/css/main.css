@@ -856,3 +856,158 @@ body {
   font-weight: 500;
   line-height: 17px;
 }
+.get-design-project-gift {
+  background-color: #0E0F12;
+  overflow: hidden;
+}
+@media (max-width: 1190px) {
+  .get-design-project-gift {
+    overflow: initial;
+  }
+}
+.get-design-project-gift__body {
+  display: grid;
+  grid-template-columns: minmax(449px, auto) 1fr;
+  grid-template-areas: 'title apartment' 'sub-title apartment' 'button apartment';
+  gap: 0 42px;
+  border-radius: 24px;
+  background-color: #262830;
+  padding: 80px 64px;
+}
+@media (max-width: 1250px) {
+  .get-design-project-gift__body {
+    grid-template-columns: minmax(449px, auto) minmax(auto, 449px);
+    grid-template-areas: 'apartment title' 'apartment sub-title' 'apartment button';
+  }
+}
+@media (max-width: 1190px) {
+  .get-design-project-gift__body {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'apartment' 'title' 'sub-title' 'button';
+  }
+}
+@media (max-width: 770px) {
+  .get-design-project-gift__body {
+    padding: 40px 40px 48px 40px;
+  }
+}
+@media (max-width: 600px) {
+  .get-design-project-gift__body {
+    padding: 20px 20px 32px 20px;
+  }
+}
+.get-design-project-gift__title {
+  display: flex;
+  align-items: center;
+  grid-area: title;
+  color: #F0F0F0;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 49px;
+}
+@media (max-width: 1190px) {
+  .get-design-project-gift__title {
+    margin-top: 21px;
+  }
+}
+@media (max-width: 770px) {
+  .get-design-project-gift__title {
+    font-size: 40px;
+    line-height: 43px;
+  }
+}
+@media (max-width: 600px) {
+  .get-design-project-gift__title {
+    font-size: 32px;
+    line-height: 35px;
+    margin-top: 20px;
+  }
+}
+.get-design-project-gift__img.present {
+  justify-self: start;
+}
+@media (max-width: 1190px) {
+  .get-design-project-gift__img.present {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 770px) {
+  .get-design-project-gift__img.present {
+    width: 64px;
+  }
+}
+.get-design-project-gift__img.apartment {
+  grid-area: apartment;
+  margin-top: -114px;
+  margin-bottom: -114px;
+  margin-right: -118px;
+}
+@media (max-width: 1250px) {
+  .get-design-project-gift__img.apartment {
+    width: 580px;
+    margin-top: -40px;
+    margin-bottom: -40px;
+    margin-left: -118px;
+  }
+}
+@media (max-width: 1190px) {
+  .get-design-project-gift__img.apartment {
+    width: 773px;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+.get-design-project-gift__sub-title {
+  display: flex;
+  justify-self: start;
+  max-width: 390px;
+  grid-area: sub-title;
+  color: #E0E0E0;
+  font-family: 'FuturaPT';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 126%;
+}
+@media (max-width: 1190px) {
+  .get-design-project-gift__sub-title {
+    max-width: 590px;
+    margin-top: 11px;
+  }
+}
+@media (max-width: 600px) {
+  .get-design-project-gift__sub-title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+.get-design-project-gift__button {
+  justify-self: start;
+  grid-area: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+  background-color: #FFC76E;
+  color: #11172E;
+}
+@media (max-width: 1190px) {
+  .get-design-project-gift__button {
+    margin-top: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .get-design-project-gift__button {
+    margin-top: 24px;
+  }
+}
