@@ -1,0 +1,29 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.with-furni-saving {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    max-width: 520px;
+    padding: 20px 24px 20px 16px;
+    gap: 8px;
+    border-radius: 24px;
+    border: 1px solid #FFF;
+    background-color: #E4E8F7;
+
+    &__img.coins {
+        position: absolute;
+        right: 5px;
+    }
+
+    &__description {
+        color: #11172E;
+        font-family: @var-mainFont;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+    }
+}

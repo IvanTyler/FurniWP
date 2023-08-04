@@ -1,0 +1,28 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.furnishing-process {
+    background-color: #EFF2FD;
+
+    &__title {
+        color: #11172E;
+        text-align: center;
+        font-family: @var-mainFont;
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 49px;
+    }
+}
+
+.container-furnishing-process {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 764px;
+
+    @media (max-width: 768px) {
+        max-width: initial;
+        margin-left: -48px;
+        margin-right: -48px;
+    }
+}

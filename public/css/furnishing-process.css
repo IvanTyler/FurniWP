@@ -1,0 +1,38 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+}
+.furnishing-process {
+  background-color: #EFF2FD;
+}
+.furnishing-process__title {
+  color: #11172E;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 49px;
+}
+.container-furnishing-process {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 764px;
+}
+@media (max-width: 768px) {
+  .container-furnishing-process {
+    max-width: initial;
+    margin-left: -48px;
+    margin-right: -48px;
+  }
+}
