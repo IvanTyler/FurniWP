@@ -27,9 +27,19 @@ body {
   padding: 88px 60px;
   margin: 0 auto;
 }
-@media (max-width: 1030px) {
+@media (max-width: 1160px) {
   .container {
     padding: 88px 48px;
+  }
+}
+@media (max-width: 1030px) {
+  .container {
+    padding: 88px 32px;
+  }
+}
+@media (max-width: 770px) {
+  .container {
+    padding: 88px 20px;
   }
 }
 .button {
@@ -708,8 +718,8 @@ body {
 @media (max-width: 768px) {
   .container-furnishing-process {
     max-width: initial;
-    margin-left: -48px;
-    margin-right: -48px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 .furnishing-process-description {
@@ -806,6 +816,13 @@ body {
 .furnishing-process-description__column.with-furni-column {
   padding-left: 40px;
   padding-right: 20px;
+}
+@media (max-width: 500px) {
+  .furnishing-process-description__column.with-furni-column,
+  .furnishing-process-description__column.by-yourself-column {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 .furnishing-process-description__icon {
   grid-area: icon;
@@ -1010,4 +1027,89 @@ body {
   .get-design-project-gift__button {
     margin-top: 24px;
   }
+}
+.faq__title {
+  color: #11172E;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+  text-transform: uppercase;
+}
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(33.333% - 40px), 1fr));
+  gap: 56px 40px;
+  margin-top: 56px;
+}
+@media (max-width: 1030px) {
+  .faq-list {
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 40px), 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .faq-list {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% - 40px), 1fr));
+  }
+}
+.faq-list-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.faq-list-item__number {
+  position: absolute;
+  z-index: -1;
+  top: -40px;
+  left: calc(50% - 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  color: #EFF2FD;
+  font-family: 'FuturaPT';
+  font-size: 120px;
+  font-weight: 450;
+  line-height: 100%;
+}
+.faq-list-item__title,
+.faq-list-item__description {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 16px;
+  line-height: 126%;
+}
+.faq-list-item__description {
+  font-weight: 400;
+}
+.faq-list-item__list-item {
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 126%;
+}
+.faq-list-item__list-item:not(:last-child) {
+  display: flex;
+  align-items: start;
+}
+.faq-list-item__list-item:not(:last-child)::before {
+  content: '';
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #000;
+}
+.faq-list-item__link {
+  color: #CE1A30;
+  font-family: 'FuturaPT';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 126%;
+  border-bottom: solid 1px;
 }

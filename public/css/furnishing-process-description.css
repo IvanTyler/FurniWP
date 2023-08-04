@@ -107,6 +107,13 @@
   padding-left: 40px;
   padding-right: 20px;
 }
+@media (max-width: 500px) {
+  .furnishing-process-description__column.with-furni-column,
+  .furnishing-process-description__column.by-yourself-column {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .furnishing-process-description__icon {
   grid-area: icon;
 }

@@ -1,0 +1,102 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.faq {
+
+    &__title {
+        color: #11172E;
+        text-align: center;
+        font-family: @var-mainFont;
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 126%;
+        text-transform: uppercase;
+    }
+}
+
+.container-faq {}
+
+.faq-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(33.333% - 40px), 1fr));
+    gap: 56px 40px;
+    margin-top: 56px;
+
+    @media (max-width: 1030px) {
+        grid-template-columns: repeat(auto-fill, minmax(calc(50% - 40px), 1fr));
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: repeat(auto-fill, minmax(calc(100% - 40px), 1fr));
+    }
+}
+
+.faq-list-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__number {
+        position: absolute;
+        z-index: -1;
+        top: -40px;
+        left: calc(50% - 40px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        color: #EFF2FD;
+        font-family: @var-mainFont;
+        font-size: 120px;
+        font-weight: 450;
+        line-height: 100%;
+    }
+
+    &__title,
+    &__description {
+        color: #11172E;
+        font-family: @var-mainFont;
+        font-size: 16px;
+        line-height: 126%;
+    }
+
+    &__description {
+        font-weight: 400;
+    }
+
+    &__list {}
+
+    &__list-item {
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 126%;
+
+        &:not(:last-child) {
+            display: flex;
+            align-items: start;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                margin-right: 5px;
+                margin-top: 7px;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: #000;
+            }
+        }
+    }
+
+    &__link {
+        color: #CE1A30;
+        font-family: @var-mainFont;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 126%;
+        border-bottom: solid 1px;
+    }
+}
