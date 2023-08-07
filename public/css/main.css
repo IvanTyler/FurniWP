@@ -1245,6 +1245,11 @@ body {
     width: 64px;
   }
 }
+@media (max-width: 430px) {
+  .get-design-project-gift__img.present {
+    display: none;
+  }
+}
 .get-design-project-gift__img.apartment {
   grid-area: apartment;
   margin-top: -114px;
