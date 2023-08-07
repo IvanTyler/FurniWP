@@ -14,6 +14,10 @@
     display: grid;
     grid-template-columns: 88px minmax(auto, 265px) minmax(auto, 265px) minmax(auto, 265px);
     gap: 40px 88px;
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .social-media {

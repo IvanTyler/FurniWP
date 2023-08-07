@@ -12,6 +12,23 @@
   border-radius: 88px;
   cursor: pointer;
 }
+.title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
 .service-furni {
   grid-area: service;
   display: grid;
@@ -28,21 +45,20 @@
   }
 }
 .service-furni__title {
-  color: #11172E;
   font-family: 'FuturaPT';
   font-size: 46px;
-  line-height: 49px;
+  font-weight: 700;
+  line-height: 126%;
+  color: #11172E;
 }
-@media (max-width: 900px) {
+@media (max-width: 1030px) {
   .service-furni__title {
     font-size: 40px;
-    line-height: 43px;
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 500px) {
   .service-furni__title {
     font-size: 32px;
-    line-height: 35px;
   }
 }
 .service-furni__sub-title {

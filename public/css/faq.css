@@ -12,14 +12,41 @@
   border-radius: 88px;
   cursor: pointer;
 }
-.faq__title {
+.title {
   color: #11172E;
-  text-align: center;
   font-family: 'FuturaPT';
   font-size: 46px;
   font-weight: 700;
   line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
+.faq__title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+  text-align: center;
   text-transform: uppercase;
+}
+@media (max-width: 1030px) {
+  .faq__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .faq__title {
+    font-size: 32px;
+  }
 }
 .faq-list {
   display: grid;

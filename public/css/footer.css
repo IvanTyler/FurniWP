@@ -12,6 +12,23 @@
   border-radius: 88px;
   cursor: pointer;
 }
+.title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
 .footer {
   border-top: 1px solid #E4E8F7;
   background-color: #EFF2FD;
@@ -20,6 +37,11 @@
   display: grid;
   grid-template-columns: 88px minmax(auto, 265px) minmax(auto, 265px) minmax(auto, 265px);
   gap: 40px 88px;
+}
+@media (max-width: 800px) {
+  .container-footer {
+    grid-template-columns: 1fr;
+  }
 }
 .social-media {
   display: flex;

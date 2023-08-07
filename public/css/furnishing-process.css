@@ -12,16 +12,43 @@
   border-radius: 88px;
   cursor: pointer;
 }
+.title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
 .furnishing-process {
   background-color: #EFF2FD;
 }
 .furnishing-process__title {
   color: #11172E;
-  text-align: center;
   font-family: 'FuturaPT';
   font-size: 46px;
   font-weight: 700;
-  line-height: 49px;
+  line-height: 126%;
+  text-align: center;
+}
+@media (max-width: 1030px) {
+  .furnishing-process__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .furnishing-process__title {
+    font-size: 32px;
+  }
 }
 .container-furnishing-process {
   display: flex;
