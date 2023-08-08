@@ -53,6 +53,12 @@
   flex-direction: column;
   gap: 16px;
 }
+.footer-nav-menu__item {
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 148%;
+}
 .footer-nav-menu__item:first-child {
   color: #B3B9D1;
   font-family: 'FuturaPT';
