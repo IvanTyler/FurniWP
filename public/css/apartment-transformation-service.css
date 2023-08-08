@@ -66,11 +66,24 @@
   color: #CE1A30;
   font-family: 'FuturaPT';
 }
+@keyframes signal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .apartment-transformation-service__img {
+  display: none;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+  animation: signal 1s;
+}
+.apartment-transformation-service__img.active {
+  display: inline-block;
 }
 .apartment-transformation-service__wrapper-img {
   height: 600px;

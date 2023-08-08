@@ -70,14 +70,6 @@
     border: none;
   }
 }
-.furnishing-process-description__circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-}
 .furnishing-process-description__name-chapter {
   display: flex;
   align-items: center;
@@ -149,10 +141,4 @@
   grid-area: period-of-time;
   color: #541ACE;
   font-weight: 400;
-}
-.circle-green {
-  background-color: #0EA56F;
-}
-.circle-red {
-  background-color: #D9281D;
 }

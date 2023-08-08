@@ -12,11 +12,13 @@
 html,
 body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 .wrapper-main {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  padding-top: 64px;
 }
 .main {
   margin-top: 48px;
@@ -72,6 +74,15 @@ body {
   .title {
     font-size: 32px;
   }
+}
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.36);
+  z-index: 1;
 }
 .header__logo-link {
   grid-area: logo;
@@ -158,11 +169,24 @@ body {
   color: #CE1A30;
   font-family: 'FuturaPT';
 }
+@keyframes signal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .apartment-transformation-service__img {
+  display: none;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+  animation: signal 1s;
+}
+.apartment-transformation-service__img.active {
+  display: inline-block;
 }
 .apartment-transformation-service__wrapper-img {
   height: 600px;
@@ -538,11 +562,6 @@ body {
 @media (max-width: 820px) {
   .home-care-service-furni__img.palette {
     display: inline-block;
-  }
-}
-@media (max-width: 560px) {
-  .home-care-service-furni__img.palette {
-    display: none;
   }
 }
 .home-care-service-furni__description-wrapper {
@@ -1051,14 +1070,6 @@ body {
     border: none;
   }
 }
-.furnishing-process-description__circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-}
 .furnishing-process-description__name-chapter {
   display: flex;
   align-items: center;
@@ -1130,12 +1141,6 @@ body {
   grid-area: period-of-time;
   color: #541ACE;
   font-weight: 400;
-}
-.circle-green {
-  background-color: #0EA56F;
-}
-.circle-red {
-  background-color: #D9281D;
 }
 .with-furni-saving {
   position: relative;

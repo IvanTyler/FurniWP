@@ -1,0 +1,39 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.get-design-project {
+    grid-area: get-design-project;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    margin-top: auto;
+    padding: 16px 24px 16px 16px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 12px;
+    background-color: #323540;
+
+    @media (max-width: 1270px) {
+        margin-top: 12px;
+    }
+
+    @media (max-width: 970px) {
+        margin-top: 24px;
+    }
+
+    @media (max-width: 820px) {
+        grid-template-columns: 40px 1fr 1fr;
+    }
+
+    @media (max-width: 560px) {
+        grid-template-columns: 40px 1fr;
+        margin-top: 12px;
+    }
+
+    &__text {
+        color: #F0F0F0;
+        font-family: @var-mainFont;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+}

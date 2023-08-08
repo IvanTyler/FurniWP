@@ -1,0 +1,70 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+}
+.title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
+.get-design-project {
+  grid-area: get-design-project;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  margin-top: auto;
+  padding: 16px 24px 16px 16px;
+  align-items: center;
+  gap: 16px;
+  border-radius: 12px;
+  background-color: #323540;
+}
+@media (max-width: 1270px) {
+  .get-design-project {
+    margin-top: 12px;
+  }
+}
+@media (max-width: 970px) {
+  .get-design-project {
+    margin-top: 24px;
+  }
+}
+@media (max-width: 820px) {
+  .get-design-project {
+    grid-template-columns: 40px 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .get-design-project {
+    grid-template-columns: 40px 1fr;
+    margin-top: 12px;
+  }
+}
+.get-design-project__text {
+  color: #F0F0F0;
+  font-family: 'FuturaPT';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}

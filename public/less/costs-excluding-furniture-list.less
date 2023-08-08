@@ -1,0 +1,20 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.costs-excluding-furniture-list {
+    display: grid;
+    grid-area: costs-excluding-furniture-list;
+    gap: 4px;
+    min-width: 145px;
+
+    @media (max-width: 600px) {
+        min-width: initial;
+    }
+
+    &__item {
+        color: #E0E0E0;
+        font-family: @var-mainFont;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

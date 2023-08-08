@@ -1,0 +1,75 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.costs-excluding {
+    display: grid;
+    grid-area: costs-excluding;
+    grid-template-areas:
+        'title title'
+        'costs-excluding-furniture-list sofa';
+    gap: 12px 0;
+    padding: 20px 24px;
+    border-radius: 12px;
+    background-color: #323540;
+
+    @media (max-width: 1100px) {
+        width: 366px;
+        margin-left: -60px;
+    }
+
+    @media (max-width: 950px) {
+        width: initial;
+        margin-left: 0;
+    }
+
+    @media (max-width: 500px) {
+        padding: 20px 20px;
+    }
+
+    &__title {
+        max-width: 225px;
+        grid-area: title;
+        color: #F0F0F0;
+        font-family: @var-mainFont;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+
+        @media (max-width: 950px) {
+            max-width: initial;
+        }
+    }
+
+    &__img {
+        grid-area: sofa;
+        width: 224px;
+
+        @media (max-width: 1100px) {
+            position: relative;
+            top: 40px;
+            width: 277px;
+        }
+
+        @media (max-width: 950px) {
+            top: 30px;
+            justify-self: end;
+            align-self: flex-end;
+        }
+
+        @media (max-width: 600px) {
+            right: -40px;
+            width: 100%;
+        }
+
+        @media (max-width: 500px) {
+            right: -10px;
+        }
+
+        @media (max-width: 400px) {
+            width: 114px;
+            position: absolute;
+            top: 5px;
+            right: 7px;
+        }
+    }
+}

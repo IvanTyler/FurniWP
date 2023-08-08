@@ -1,0 +1,302 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+}
+.title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
+.home-care-service-furni {
+  display: grid;
+  padding: 43px 32px;
+  border-radius: 20px;
+  border: 2px solid #323540;
+  background-color: #262830;
+}
+@media (max-width: 600px) {
+  .home-care-service-furni {
+    padding: 24px 20px;
+  }
+}
+.home-care-service-furni__title {
+  grid-area: title;
+  color: #F0F0F0;
+  font-family: 'FuturaPT';
+  font-size: 24px;
+  line-height: 27px;
+}
+.home-care-service-furni__title.furnishing {
+  grid-area: title-furnishing;
+}
+.home-care-service-furni__title.renovation {
+  grid-area: title-renovation;
+}
+.home-care-service-furni__img.isometric {
+  grid-area: isometric;
+  justify-self: center;
+}
+@media (max-width: 1100px) {
+  .home-care-service-furni__img.isometric {
+    display: none;
+  }
+}
+.home-care-service-furni__img.ladder {
+  grid-area: ladder;
+  width: 257px;
+  margin-top: -46px;
+  margin-bottom: -16px;
+}
+@media (max-width: 970px) {
+  .home-care-service-furni__img.ladder {
+    margin-top: 26px;
+  }
+}
+@media (max-width: 820px) {
+  .home-care-service-furni__img.ladder {
+    margin-top: -115px;
+    margin-bottom: -80px;
+  }
+}
+@media (max-width: 560px) {
+  .home-care-service-furni__img.ladder {
+    margin-top: -50px;
+    margin-bottom: -20px;
+    margin-right: -35px;
+    width: 131px;
+  }
+}
+.home-care-service-furni__img.plan {
+  position: absolute;
+  top: -35px;
+  left: -25px;
+  grid-area: plan;
+  justify-self: start;
+  width: 90px;
+}
+@media (max-width: 1270px) {
+  .home-care-service-furni__img.plan {
+    position: static;
+  }
+}
+@media (max-width: 970px) {
+  .home-care-service-furni__img.plan {
+    width: initial;
+  }
+}
+@media (max-width: 820px) {
+  .home-care-service-furni__img.plan {
+    display: none;
+  }
+}
+@media (max-width: 560px) {
+  .home-care-service-furni__img.plan {
+    display: inline-block;
+    width: 70px;
+    margin-left: 15px;
+  }
+}
+.home-care-service-furni__img.plan_mobile {
+  display: none;
+  width: 90px;
+}
+@media (max-width: 820px) {
+  .home-care-service-furni__img.plan_mobile {
+    display: inline-block;
+    margin-top: -40px;
+    margin-right: 50px;
+    justify-self: end;
+  }
+}
+@media (max-width: 560px) {
+  .home-care-service-furni__img.plan_mobile {
+    display: none;
+  }
+}
+.home-care-service-furni__img.palette_mobile {
+  grid-area: palette_mobile;
+  display: none;
+}
+@media (max-width: 970px) {
+  .home-care-service-furni__img.palette_mobile {
+    display: inline-block;
+    align-self: end;
+  }
+}
+@media (max-width: 820px) {
+  .home-care-service-furni__img.palette_mobile {
+    display: none;
+  }
+}
+@media (max-width: 970px) {
+  .home-care-service-furni__img.palette {
+    display: none;
+  }
+}
+@media (max-width: 820px) {
+  .home-care-service-furni__img.palette {
+    display: inline-block;
+  }
+}
+.home-care-service-furni__description-wrapper {
+  display: flex;
+  grid-area: description-wrapper;
+  justify-content: space-between;
+  align-items: start;
+  gap: 4px;
+  margin-top: 16px;
+}
+.home-care-service-furni__price-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-areas: 'price plan';
+  grid-template-columns: 1fr 1fr;
+  grid-area: price-wrapper;
+}
+@media (max-width: 970px) {
+  .home-care-service-furni__price-wrapper {
+    grid-template-areas: 'price plan' 'palette_mobile plan';
+    margin-top: 15px;
+  }
+}
+@media (max-width: 820px) {
+  .home-care-service-furni__price-wrapper {
+    margin-top: 0;
+  }
+}
+@media (max-width: 560px) {
+  .home-care-service-furni__price-wrapper {
+    grid-template-areas: 'price plan';
+    margin-top: 15px;
+  }
+}
+.home-care-service-furni__description {
+  color: #E0E0E0;
+  font-family: 'FuturaPT';
+  font-size: 15px;
+  line-height: 18px;
+}
+@media (max-width: 820px) {
+  .home-care-service-furni__description {
+    align-self: center;
+  }
+}
+.home-care-service-furni__description-renovation {
+  display: flex;
+  grid-area: description-renovation-block;
+}
+@media (max-width: 970px) {
+  .home-care-service-furni__description-renovation {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+@media (max-width: 820px) {
+  .home-care-service-furni__description-renovation {
+    flex-direction: row;
+  }
+}
+.home-care-service-furni__description.renovation {
+  margin-right: -80px;
+  align-self: start;
+}
+@media (max-width: 970px) {
+  .home-care-service-furni__description.renovation {
+    margin-right: 0;
+  }
+}
+.home-care-service-furni__learn-more {
+  font-family: 'FuturaPT';
+  font-size: 16px;
+  line-height: 19px;
+  color: #F7921C;
+  border-bottom: 1px solid;
+}
+.home-care-service-furni__price {
+  display: grid;
+  grid-area: price;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: min-content min-content;
+  grid-template-areas: 'price-title price-title' 'current-price old-price';
+  gap: 3px;
+  align-self: center;
+  color: #E0E0E0;
+  font-family: 'FuturaPT';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.home-care-service-furni__price-title,
+.home-care-service-furni__old-price,
+.home-care-service-furni__current-price {
+  grid-area: price-title;
+  font-family: 'FuturaPT';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.home-care-service-furni__current-price {
+  grid-area: current-price;
+}
+.home-care-service-furni__old-price {
+  grid-area: old-price;
+  text-decoration: line-through;
+}
+.home-care-service-furni.furnishing {
+  position: relative;
+  grid-area: furnishing;
+  grid-template-columns: minmax(auto, 366px) minmax(auto, 245px) minmax(auto, 366px);
+  grid-template-rows: min-content min-content min-content;
+  grid-template-areas: 'title-furnishing isometric costs-excluding' 'furnishing-list isometric costs-excluding' 'furnishing-list isometric costs-excluding';
+  gap: 16px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1100px) {
+  .home-care-service-furni.furnishing {
+    grid-template-columns: minmax(auto, 366px) minmax(366px, 366px);
+    grid-template-areas: 'title-furnishing costs-excluding' 'furnishing-list costs-excluding' 'furnishing-list costs-excluding';
+  }
+}
+@media (max-width: 950px) {
+  .home-care-service-furni.furnishing {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'title-furnishing' 'furnishing-list' 'costs-excluding';
+  }
+}
+.home-care-service-furni.unique-interior-design {
+  display: flex;
+  flex-direction: column;
+  grid-area: unique-interior-design;
+  grid-template-columns: auto auto;
+  grid-template-areas: 'title title' 'description-wrapper description-wrapper' 'price-wrapper price-wrapper' 'get-design-project get-design-project';
+}
+.home-care-service-furni.renovation {
+  position: relative;
+  grid-area: renovation;
+  grid-template-columns: auto auto;
+  grid-template-areas: 'title-renovation title-renovation' 'description-renovation-block description-renovation';
+  gap: 16px 0;
+}

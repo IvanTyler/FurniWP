@@ -2,9 +2,18 @@
 @import url('./mixins/main.less');
 
 .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.36);
+    z-index: 1;
+
     &__logo-link {
         grid-area: logo;
     }
+
     &__request {
         grid-area: button;
         .button();
