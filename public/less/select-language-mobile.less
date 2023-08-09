@@ -1,0 +1,20 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.select-language-mobile {
+    display: flex;
+    gap: 16px;
+
+    &__item {
+        color: #262830;
+        text-align: center;
+        font-family: @var-mainFont;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 148%;
+    }
+
+    &__item.active {
+        color: #8B8B9E;
+    }
+}

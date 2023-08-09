@@ -80,9 +80,9 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  background-color: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.36);
   z-index: 1;
+  background-color: #FFF;
+  box-shadow: 0 4px 24px 0px rgba(0, 0, 0, 0.08);
 }
 .header__logo-link {
   grid-area: logo;
@@ -104,11 +104,36 @@ body {
   background-color: #CE1A30;
   color: #fff;
 }
+@media (max-width: 1030px) {
+  .header__request {
+    display: none;
+  }
+}
+.header__request.mobile {
+  display: flex;
+}
+.header__sandwich {
+  display: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-image: url('../icon/common/sandwich.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 1030px) {
+  .header__sandwich {
+    display: inline-block;
+  }
+}
+.header__sandwich.close {
+  background-image: url('../icon/common/close-black.svg');
+}
 .container-header {
   grid-template-areas: 'logo nav-menu button';
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 32px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -120,17 +145,135 @@ body {
   justify-self: end;
   gap: 32px;
 }
-.header-nav-menu__link {
+@media (max-width: 1030px) {
+  .header-nav-menu {
+    display: none;
+  }
+}
+.header-nav-menu__link,
+.header-nav-menu__item,
+.header-nav-menu__text {
   color: #262830;
   font-family: 'FuturaPT';
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
+  cursor: pointer;
 }
-@media (max-width: 1240px) {
-  .header-nav-menu {
-    display: none;
+.header-nav-menu__text {
+  width: 22px;
+}
+.header-nav-menu__item {
+  display: flex;
+  align-items: center;
+}
+.header-nav-menu__item:last-child {
+  position: relative;
+  gap: 6px;
+}
+.header-nav-menu__item:last-child::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 8px;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+  background-image: url('../../public/icon/common/arrow-up-black.svg');
+  transition: transform 0.2s;
+}
+.header-nav-menu__item.active:last-child::after {
+  transform: rotate(0);
+}
+.show-select-language::after {
+  display: none !important;
+}
+.header-nav-menu.mobile {
+  display: none;
+}
+@media (max-width: 1030px) {
+  .header-nav-menu.mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0 48px 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%);
+    border-radius: 0 0 16px 16px;
+    background-color: #FFF;
+    box-shadow: 0 8px 48px 0px rgba(0, 0, 0, 0.12);
   }
+}
+.header-nav-menu.mobile__item::after {
+  content: '';
+  display: none;
+}
+.select-language {
+  position: absolute;
+  right: -18px;
+  bottom: -8px;
+  transform: translateY(100%);
+  display: none;
+  flex-direction: column;
+  padding: 12px 24px 12px 12px;
+  gap: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 48px 0px rgba(0, 0, 0, 0.12);
+}
+.select-language::before {
+  content: '';
+  top: 0;
+  right: 14px;
+  position: absolute;
+  display: inline-block;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+  transform: translateY(-100%);
+}
+.select-language__item {
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+  gap: 5px;
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 148%;
+}
+.select-language__item::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.select-language__item.active::before {
+  background-image: url('../../public/icon/common/check-black.svg');
+}
+.select-language.active {
+  display: flex;
+}
+.select-language-mobile {
+  display: flex;
+  gap: 16px;
+}
+.select-language-mobile__item {
+  color: #262830;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 148%;
+}
+.select-language-mobile__item.active {
+  color: #8B8B9E;
 }
 .apartment-transformation-service__title {
   font-family: 'FuturaPT';
@@ -1512,6 +1655,13 @@ body {
   cursor: pointer;
   color: #fff;
 }
+.social-media {
+  display: flex;
+  gap: 8px;
+}
+.social-media.footer {
+  margin-top: 32px;
+}
 .footer {
   border-top: 1px solid #E4E8F7;
   background-color: #EFF2FD;
@@ -1525,11 +1675,6 @@ body {
   .container-footer {
     grid-template-columns: 1fr;
   }
-}
-.social-media {
-  display: flex;
-  margin-top: 32px;
-  gap: 8px;
 }
 .footer-nav-menu {
   display: flex;

@@ -34,9 +34,9 @@
   top: 0;
   right: 0;
   left: 0;
-  background-color: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.36);
   z-index: 1;
+  background-color: #FFF;
+  box-shadow: 0 4px 24px 0px rgba(0, 0, 0, 0.08);
 }
 .header__logo-link {
   grid-area: logo;
@@ -58,11 +58,36 @@
   background-color: #CE1A30;
   color: #fff;
 }
+@media (max-width: 1030px) {
+  .header__request {
+    display: none;
+  }
+}
+.header__request.mobile {
+  display: flex;
+}
+.header__sandwich {
+  display: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-image: url('../icon/common/sandwich.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 1030px) {
+  .header__sandwich {
+    display: inline-block;
+  }
+}
+.header__sandwich.close {
+  background-image: url('../icon/common/close-black.svg');
+}
 .container-header {
   grid-template-areas: 'logo nav-menu button';
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 32px;
   padding-top: 12px;
   padding-bottom: 12px;

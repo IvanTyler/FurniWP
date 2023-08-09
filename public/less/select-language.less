@@ -1,0 +1,59 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.select-language {
+    position: absolute;
+    right: -18px;
+    bottom: -8px;
+    transform: translateY(100%);
+    display: none;
+    flex-direction: column;
+    padding: 12px 24px 12px 12px;
+    gap: 8px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 48px 0px rgba(0, 0, 0, 0.12);
+
+    &::before {
+        content: '';
+        top: 0;
+        right: 14px;
+        position: absolute;
+        display: inline-block;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #fff;
+        transform: translateY(-100%);
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 4px 0;
+        gap: 5px;
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 148%;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &__item.active {
+        &::before {
+            background-image: url('../../public/icon/common/check-black.svg');
+        }
+    }
+}
+
+.select-language.active {
+    display: flex;
+}

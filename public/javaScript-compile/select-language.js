@@ -1,15 +1,3 @@
-const slide_images = document.querySelectorAll('.apartment-transformation-service__img')
-
-function slideApartamentsImg(images, i) {
-    setInterval(() => {
-        images.forEach(el => el.classList?.remove('active'))
-        images[i].classList?.add('active')
-        i++
-        i = i % images.length
-    }, 5000)
-}
-
-slideApartamentsImg(slide_images, 0)
 const $show_select_language = document.querySelector('#show-select-language')
 const $select_language = document.querySelector('.select-language')
 const $select_language_items = document.querySelectorAll('.select-language__item')
