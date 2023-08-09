@@ -80,7 +80,7 @@
     display: inline-block;
   }
 }
-.header__sandwich.close {
+.header__sandwich.open {
   background-image: url('../icon/common/close-black.svg');
 }
 .container-header {
