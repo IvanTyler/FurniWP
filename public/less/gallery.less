@@ -1,7 +1,7 @@
 @import url('./variables/main-variables.less');
 @import url('./mixins/main.less');
 
-.apartment-transformation-service {
+.gallery {
 
     &__title {
         .title();
@@ -20,6 +20,10 @@
             font-size: 32px;
             line-height: 35px;
         }
+    }
+
+    &__title.title-sets {
+        text-align: left;
     }
 
     &__text {
@@ -63,9 +67,13 @@
             height: 340px;
         }
     }
+
+    &__wrapper-img.wrapper-sets {
+        height: 558px;
+    }
 }
 
-.container-apartment-transformation {
+.container-gallery {
     display: grid;
     grid-template-columns: auto;
     grid-template-areas:

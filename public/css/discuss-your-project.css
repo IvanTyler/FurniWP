@@ -1,0 +1,63 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+}
+.title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
+.discuss-your-project {
+  grid-area: discuss-your-project;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.discuss-your-project__title {
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 126%;
+}
+.discuss-your-project__button {
+  align-self: start;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+  height: 56px;
+  color: #fff;
+  background-color: #CE1A30;
+}

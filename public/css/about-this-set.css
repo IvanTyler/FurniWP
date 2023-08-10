@@ -1,0 +1,72 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+}
+.title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
+.about-this-set__body {
+  display: grid;
+  grid-template-columns: minmax(auto, 289px) 1fr;
+  grid-template-rows: minmax(auto, 58px);
+  grid-template-areas: 'title about-this-set-list' 'discuss-your-project about-this-set-list';
+  gap: 24px 72px;
+  border-radius: 20px;
+  background-color: #EFF2FD;
+  padding: 48px;
+}
+@media (max-width: 900px) {
+  .about-this-set__body {
+    gap: 24px 40px;
+  }
+}
+@media (max-width: 720px) {
+  .about-this-set__body {
+    padding: 40px 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'title' 'about-this-set-list' 'discuss-your-project';
+  }
+}
+.about-this-set__title {
+  grid-area: title;
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .about-this-set__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .about-this-set__title {
+    font-size: 32px;
+  }
+}

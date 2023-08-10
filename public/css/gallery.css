@@ -62,6 +62,9 @@
     line-height: 35px;
   }
 }
+.gallery__title.title-sets {
+  text-align: left;
+}
 .gallery__text {
   color: #CE1A30;
   font-family: 'FuturaPT';
@@ -99,6 +102,9 @@
   .gallery__wrapper-img {
     height: 340px;
   }
+}
+.gallery__wrapper-img.wrapper-sets {
+  height: 558px;
 }
 .container-gallery {
   display: grid;

@@ -1,6 +1,6 @@
-const slide_images = document.querySelectorAll('.apartment-transformation-service__img')
+const slide_images = document.querySelectorAll('.gallery__img')
 
-function slideApartamentsImg(images, i) {
+function slideGalleryImg(images, i) {
     setInterval(() => {
         images.forEach(el => el.classList?.remove('active'))
         images[i].classList?.add('active')
@@ -9,7 +9,15 @@ function slideApartamentsImg(images, i) {
     }, 5000)
 }
 
-slideApartamentsImg(slide_images, 0)
+slideGalleryImg(slide_images, 0)
+const $header = document.querySelector('.header')
+
+window.addEventListener('scroll', () => {
+    const { y } = document.body.getBoundingClientRect()
+    y < 0 ?
+        $header.classList.add('scroll') :
+        $header.classList.remove('scroll')
+})
 const $show_select_language = document.querySelector('#show-select-language')
 const $select_language = document.querySelector('.select-language')
 const $select_language_items = document.querySelectorAll('.select-language__item')
@@ -35,7 +43,6 @@ $show_select_language?.addEventListener('click', (e) => {
 
 $select_language?.addEventListener('click', (e) => e.stopPropagation())
 $mobile_menu?.addEventListener('click', (e) => e.stopPropagation())
-
 
 document.addEventListener('click', (e) => {
     if ($select_language.classList.contains('active')) {

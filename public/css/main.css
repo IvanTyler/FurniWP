@@ -82,7 +82,7 @@ body {
   left: 0;
   z-index: 1;
   background-color: #FFF;
-  box-shadow: 0 4px 24px 0px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s;
 }
 .header__logo-link {
   grid-area: logo;
@@ -128,6 +128,9 @@ body {
 }
 .header__sandwich.open {
   background-image: url('../icon/common/close-black.svg');
+}
+.header.scroll {
+  box-shadow: 0 4px 24px 0px rgba(0, 0, 0, 0.08);
 }
 .container-header {
   grid-template-areas: 'logo nav-menu button';
@@ -278,7 +281,7 @@ body {
 .select-language-mobile__item.active {
   color: #8B8B9E;
 }
-.apartment-transformation-service__title {
+.gallery__title {
   font-family: 'FuturaPT';
   font-size: 46px;
   font-weight: 700;
@@ -290,28 +293,31 @@ body {
   line-height: 71px;
 }
 @media (max-width: 1030px) {
-  .apartment-transformation-service__title {
+  .gallery__title {
     font-size: 40px;
   }
 }
 @media (max-width: 500px) {
-  .apartment-transformation-service__title {
+  .gallery__title {
     font-size: 32px;
   }
 }
 @media (max-width: 1030px) {
-  .apartment-transformation-service__title {
+  .gallery__title {
     font-size: 56px;
     line-height: 59px;
   }
 }
 @media (max-width: 630px) {
-  .apartment-transformation-service__title {
+  .gallery__title {
     font-size: 32px;
     line-height: 35px;
   }
 }
-.apartment-transformation-service__text {
+.gallery__title.title-sets {
+  text-align: left;
+}
+.gallery__text {
   color: #CE1A30;
   font-family: 'FuturaPT';
 }
@@ -323,7 +329,7 @@ body {
     opacity: 1;
   }
 }
-.apartment-transformation-service__img {
+.gallery__img {
   display: none;
   width: 100%;
   height: 100%;
@@ -331,25 +337,28 @@ body {
   border-radius: 20px;
   animation: signal 1s;
 }
-.apartment-transformation-service__img.active {
+.gallery__img.active {
   display: inline-block;
 }
-.apartment-transformation-service__wrapper-img {
+.gallery__wrapper-img {
   height: 600px;
   border-radius: 20px;
   grid-area: wrapper-img;
 }
 @media (max-width: 630px) {
-  .apartment-transformation-service__wrapper-img {
+  .gallery__wrapper-img {
     height: 390px;
   }
 }
 @media (max-width: 500px) {
-  .apartment-transformation-service__wrapper-img {
+  .gallery__wrapper-img {
     height: 340px;
   }
 }
-.container-apartment-transformation {
+.gallery__wrapper-img.wrapper-sets {
+  height: 558px;
+}
+.container-gallery {
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: 'title' 'wrapper-img';
@@ -357,9 +366,138 @@ body {
   padding-top: 0;
 }
 @media (max-width: 630px) {
-  .container-apartment-transformation {
+  .container-gallery {
     grid-template-areas: 'wrapper-img' 'title';
   }
+}
+.about-this-set__body {
+  display: grid;
+  grid-template-columns: minmax(auto, 289px) 1fr;
+  grid-template-rows: minmax(auto, 58px);
+  grid-template-areas: 'title about-this-set-list' 'discuss-your-project about-this-set-list';
+  gap: 24px 72px;
+  border-radius: 20px;
+  background-color: #EFF2FD;
+  padding: 48px;
+}
+@media (max-width: 900px) {
+  .about-this-set__body {
+    gap: 24px 40px;
+  }
+}
+@media (max-width: 720px) {
+  .about-this-set__body {
+    padding: 40px 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'title' 'about-this-set-list' 'discuss-your-project';
+  }
+}
+.about-this-set__title {
+  grid-area: title;
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .about-this-set__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .about-this-set__title {
+    font-size: 32px;
+  }
+}
+.discuss-your-project {
+  grid-area: discuss-your-project;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.discuss-your-project__title {
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 126%;
+}
+.discuss-your-project__button {
+  align-self: start;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+  height: 56px;
+  color: #fff;
+  background-color: #CE1A30;
+}
+.discuss-your-project-list {
+  grid-area: discuss-your-project-list;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.discuss-your-project-list__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.discuss-your-project-list__text {
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 148%;
+}
+.about-this-set-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-area: about-this-set-list;
+  gap: 32px;
+}
+@media (max-width: 1150px) {
+  .about-this-set-list {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 720px) {
+  .about-this-set-list {
+    gap: 24px;
+  }
+}
+.about-this-set-item {
+  display: grid;
+  padding: 32px 24px;
+  border-radius: 12px;
+  background-color: #FFF;
+}
+.about-this-set-item__title {
+  margin-top: 16px;
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 148%;
+}
+.about-this-set-item__description {
+  margin-top: 8px;
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 126%;
 }
 .services {
   background-color: #EFF2FD;

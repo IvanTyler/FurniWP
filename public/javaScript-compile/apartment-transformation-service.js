@@ -1,6 +1,6 @@
-const slide_images = document.querySelectorAll('.apartment-transformation-service__img')
+const slide_images = document.querySelectorAll('.gallery__img')
 
-function slideApartamentsImg(images, i) {
+function slideGalleryImg(images, i) {
     setInterval(() => {
         images.forEach(el => el.classList?.remove('active'))
         images[i].classList?.add('active')
@@ -9,4 +9,4 @@ function slideApartamentsImg(images, i) {
     }, 5000)
 }
 
-slideApartamentsImg(slide_images, 0)
+slideGalleryImg(slide_images, 0)

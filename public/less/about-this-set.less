@@ -1,0 +1,37 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.about-this-set {
+
+    &__body {
+        display: grid;
+        grid-template-columns: minmax(auto, 289px) 1fr;
+        grid-template-rows: minmax(auto, 58px);
+        grid-template-areas:
+            'title about-this-set-list'
+            'discuss-your-project about-this-set-list';
+        gap: 24px 72px;
+        border-radius: 20px;
+        background-color: #EFF2FD;
+        padding: 48px;
+
+        @media (max-width: 900px) {
+            gap: 24px 40px;
+        }
+
+        @media (max-width: 720px) {
+            padding: 40px 20px;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                'title'
+                'about-this-set-list'
+                'discuss-your-project';
+        }
+    }
+
+    &__title {
+        grid-area: title;
+        .title();
+    }
+}

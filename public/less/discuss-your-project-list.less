@@ -1,0 +1,23 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.discuss-your-project-list {
+    grid-area: discuss-your-project-list;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__text {
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 148%;
+    }
+}

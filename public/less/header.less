@@ -8,7 +8,7 @@
     left: 0;
     z-index: 1;
     background-color: #FFF;
-    box-shadow: 0 4px 24px 0px rgba(0, 0, 0, 0.08);
+    transition: box-shadow @var-transition;
 
     &__logo-link {
         grid-area: logo;
@@ -46,6 +46,10 @@
     &__sandwich.open {
         background-image: url('../icon/common/close-black.svg');
     }
+}
+
+.header.scroll {
+    box-shadow: 0 4px 24px 0px rgba(0, 0, 0, 0.08);
 }
 
 .container-header {

@@ -24,7 +24,6 @@ $show_select_language?.addEventListener('click', (e) => {
 $select_language?.addEventListener('click', (e) => e.stopPropagation())
 $mobile_menu?.addEventListener('click', (e) => e.stopPropagation())
 
-
 document.addEventListener('click', (e) => {
     if ($select_language.classList.contains('active')) {
         $select_language.classList.remove('active')

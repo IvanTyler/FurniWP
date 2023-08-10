@@ -1,0 +1,26 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.discuss-your-project {
+    grid-area: discuss-your-project;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__title {
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 126%;
+    }
+
+    &__button {
+        align-self: start;
+        margin-top: 8px;
+        .button();
+        height: 56px;
+        color: #fff;
+        background-color: @var-mainColor;
+    }
+}
