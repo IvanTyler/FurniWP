@@ -1,4 +1,4 @@
-const slide_images = document.querySelectorAll('.gallery__img')
+const slide_images = document.querySelectorAll('.slider__img')
 
 function slideGalleryImg(images, i) {
     setInterval(() => {
