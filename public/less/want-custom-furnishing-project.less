@@ -1,0 +1,26 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.want-custom-furnishing-project {
+    &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+
+        @media (max-width: 910px) {
+            max-height: 440px;
+        }
+    }
+}
+
+.container-furnishing-project {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 40px), 1fr));
+    gap: 40px;
+
+    @media (max-width: 910px) {
+        grid-template-columns: repeat(auto-fill, minmax(calc(100% - 32px), 1fr));
+        gap: 32px;
+    }
+}

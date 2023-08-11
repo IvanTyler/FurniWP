@@ -363,16 +363,22 @@ body {
   grid-template-columns: auto;
   grid-template-areas: 'title' 'wrapper-img';
   gap: 48px;
-  padding-top: 0;
 }
 @media (max-width: 630px) {
   .container-slider {
     grid-template-areas: 'wrapper-img' 'title';
   }
 }
+.container-slider.sets {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .container-gallery-sets {
   display: grid;
   gap: 16px;
+  margin-top: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 @media (max-width: 500px) {
   .container-gallery-sets {
@@ -382,6 +388,8 @@ body {
 .container-gallery-sets__img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 .container-gallery-sets__img:nth-of-type(1) {
   grid-column: 1 / span 2;
@@ -398,6 +406,69 @@ body {
 .container-gallery-sets__img:nth-of-type(12) {
   grid-column: 2 / span 2;
   grid-row: 7 / span 2;
+}
+.you-may-also-like__title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+  text-align: center;
+}
+@media (max-width: 1030px) {
+  .you-may-also-like__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .you-may-also-like__title {
+    font-size: 32px;
+  }
+}
+.you-may-also-like-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media (max-width: 650px) {
+  .you-may-also-like-list {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+.you-may-also-like-list__link {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.you-may-also-like-list__img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.you-may-also-like-list__name {
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  bottom: 40px;
+  color: #FFF;
+  font-family: 'FuturaPT';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 126%;
+}
+@media (max-width: 650px) {
+  .you-may-also-like-list__name {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    font-size: 16px;
+  }
 }
 .about-this-set__body {
   display: grid;
@@ -439,6 +510,11 @@ body {
   .about-this-set__title {
     font-size: 32px;
   }
+}
+.container-about-this-set {
+  margin-top: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .discuss-your-project {
   grid-area: discuss-your-project;
@@ -527,6 +603,104 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 126%;
+}
+.want-custom-furnishing-project__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+@media (max-width: 910px) {
+  .want-custom-furnishing-project__img {
+    max-height: 440px;
+  }
+}
+.container-furnishing-project {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(50% - 40px), 1fr));
+  gap: 40px;
+}
+@media (max-width: 910px) {
+  .container-furnishing-project {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% - 32px), 1fr));
+    gap: 32px;
+  }
+}
+.furnishing-project {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 121px 56px;
+  border-radius: 20px;
+  background-color: #F0F0F0;
+}
+@media (max-width: 1130px) {
+  .furnishing-project {
+    padding: 70px 32px;
+  }
+}
+@media (max-width: 500px) {
+  .furnishing-project {
+    padding: 32px 20px;
+    text-align: center;
+  }
+}
+.furnishing-project__title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .furnishing-project__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .furnishing-project__title {
+    font-size: 32px;
+  }
+}
+.furnishing-project__description {
+  margin-top: 24px;
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 126%;
+}
+@media (max-width: 500px) {
+  .furnishing-project__description {
+    margin-top: 12px;
+    font-size: 16px;
+  }
+}
+.furnishing-project__link {
+  color: #CE1A30;
+  border-bottom: solid 1px;
+}
+.furnishing-project__button {
+  margin-top: 34px;
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #CE1A30;
+}
+@media (max-width: 500px) {
+  .furnishing-project__button {
+    justify-self: center;
+  }
 }
 .services {
   background-color: #EFF2FD;

@@ -1,0 +1,54 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.furnishing-project {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 121px 56px;
+    border-radius: 20px;
+    background-color: #F0F0F0;
+
+    @media (max-width: 1130px) {
+        padding: 70px 32px;
+    }
+
+    @media (max-width: 500px) {
+        padding: 32px 20px;
+        text-align: center;
+    }
+
+    &__title {
+        .title();
+    }
+
+    &__description {
+        margin-top: 24px;
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 126%;
+
+        @media (max-width: 500px) {
+            margin-top: 12px;
+            font-size: 16px;
+        }
+    }
+
+    &__link {
+        color: @var-mainColor;
+        border-bottom: solid 1px;
+    }
+
+    &__button {
+        margin-top: 34px;
+        justify-self: start;
+        .button();
+        color: #fff;
+        background-color: @var-mainColor;
+
+        @media (max-width: 500px) {
+            justify-self: center;
+        }
+    }
+}

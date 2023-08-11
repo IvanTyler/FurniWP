@@ -1,0 +1,53 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+}
+.title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
+.want-custom-furnishing-project__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+@media (max-width: 910px) {
+  .want-custom-furnishing-project__img {
+    max-height: 440px;
+  }
+}
+.container-furnishing-project {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(50% - 40px), 1fr));
+  gap: 40px;
+}
+@media (max-width: 910px) {
+  .container-furnishing-project {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% - 32px), 1fr));
+    gap: 32px;
+  }
+}

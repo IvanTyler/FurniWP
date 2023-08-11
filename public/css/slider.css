@@ -111,10 +111,13 @@
   grid-template-columns: auto;
   grid-template-areas: 'title' 'wrapper-img';
   gap: 48px;
-  padding-top: 0;
 }
 @media (max-width: 630px) {
   .container-slider {
     grid-template-areas: 'wrapper-img' 'title';
   }
+}
+.container-slider.sets {
+  padding-top: 0;
+  padding-bottom: 0;
 }
