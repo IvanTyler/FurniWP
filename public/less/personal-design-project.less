@@ -1,0 +1,71 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.personal-design-project {
+    background-color: #EFF2FD;
+
+    &__body {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 424px);
+        grid-template-areas:
+            'title apartment-images'
+            'paragraph apartment-images'
+            'discuss-project apartment-images';
+        grid-template-rows: auto 60px auto;
+        align-items: center;
+        padding: 16px 16px 16px 50px;
+        gap: 0 61px;
+        border-radius: 20px;
+        border: 2px solid #E4E8F7;
+    }
+
+    &__title {
+        grid-area: title;
+        align-self: end;
+        color: #11172E;
+        font-family: @var-mainFont;
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 126%;
+    }
+
+    &__paragraph {
+        margin-top: 16px;
+        grid-area: paragraph;
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 126%;
+    }
+
+    &__discuss-project {
+        margin-top: 32px;
+        align-self: start;
+        grid-area: discuss-project;
+        display: flex;
+        gap: 24px;
+    }
+
+    &__button {
+        .button();
+        color: #fff;
+        background-color: @var-mainColor;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 148%;
+    }
+
+    &__whatsApp {}
+}
+
+.container-personal-design-project {}

@@ -1,0 +1,83 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+}
+.title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
+.apartment-images {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr 111px;
+  grid-area: apartment-images;
+  grid-template-areas: 'wrapper-img wrapper-img' 'img_1 img_2';
+  gap: 16px;
+}
+.apartment-images__wrapper-img {
+  position: relative;
+  grid-column: 1 / span 2;
+}
+.apartment-images__wrapper-price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 184px;
+  height: 115px;
+  background-image: url('../img/common/message-mini.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.apartment-images__current-price {
+  color: #FFF;
+  font-family: 'FuturaPT';
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 126%;
+}
+.apartment-images__old-price {
+  color: #FFF;
+  font-family: 'FuturaPT';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration-line: through;
+}
+.apartment-images__img {
+  width: 100%;
+  height: 100%;
+}
+.apartment-images__img.img_1 {
+  grid-area: img_1;
+}
+.apartment-images__img.img_2 {
+  grid-area: img_2;
+}

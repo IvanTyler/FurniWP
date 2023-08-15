@@ -1,0 +1,64 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.apartment-images {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 111px;
+    grid-area: apartment-images;
+    grid-template-areas:
+        'wrapper-img wrapper-img'
+        'img_1 img_2';
+    gap: 16px;
+
+    &__wrapper-img {
+        position: relative;
+        grid-column: 1 / span 2;
+    }
+
+    &__wrapper-price {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 184px;
+        height: 115px;
+        background-image: url('../img/common/message-mini.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__current-price {
+        color: #FFF;
+        font-family: @var-mainFont;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 126%;
+    }
+
+    &__old-price {
+        color: #FFF;
+        font-family: @var-mainFont;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration-line: through;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img.img_1 {
+        grid-area: img_1;
+    }
+
+    &__img.img_2 {
+        grid-area: img_2;
+    }
+}
