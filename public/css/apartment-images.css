@@ -43,14 +43,14 @@
 }
 .apartment-images__wrapper-price {
   position: absolute;
-  top: 0;
+  top: -16px;
   right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 184px;
+  width: 171px;
   height: 115px;
   background-image: url('../img/common/message-mini.png');
   background-size: cover;

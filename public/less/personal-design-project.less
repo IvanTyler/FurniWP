@@ -7,7 +7,7 @@
     &__body {
         position: relative;
         display: grid;
-        grid-template-columns: 1fr minmax(auto, 424px);
+        grid-template-columns: 1fr minmax(auto, 440px);
         grid-template-areas:
             'title apartment-images'
             'paragraph apartment-images'
@@ -17,7 +17,77 @@
         padding: 16px 16px 16px 50px;
         gap: 0 61px;
         border-radius: 20px;
+        z-index: 1;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: calc(100% - 208px);
+            background-color: #fff;
+            border: 2px solid #E4E8F7;
+            border-radius: 20px 20px 0 20px;
+            border-right: none;
+        }
+
+        &::after {
+            right: 0;
+            bottom: 0;
+            width: 212px;
+            height: calc(100% - 131px);
+            background-color: #fff;
+            border: 2px solid #E4E8F7;
+            border-left: none;
+            border-radius: 0 20px 20px 0;
+            border-top: none;
+        }
+    }
+
+    &__corner {
+        position: absolute;
+        top: 15px;
+        right: 14px;
         border: 2px solid #E4E8F7;
+        width: 192px;
+        height: 115px;
+        border-bottom-left-radius: 30px;
+        border-top: 0;
+        border-right: none;
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -17;
+            bottom: -1px;
+            left: -2px;
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            border-top-left-radius: 30px;
+            box-shadow: -5px -5px 0px 5px #fff;
+            transform: rotate(-93deg);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: -14px;
+            left: -22px;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border-top-left-radius: 20px;
+            box-shadow: -1px -1px 0px 0px #E4E8F7;
+            transform: rotate(91deg);
+        }
     }
 
     &__title {
