@@ -69,6 +69,17 @@
     height: 32%;
   }
 }
+@media (max-width: 700px) {
+  .apartment-images__wrapper-price {
+    top: -12px;
+  }
+}
+@media (max-width: 500px) {
+  .apartment-images__wrapper-price {
+    top: 7px;
+    width: 43%;
+  }
+}
 .apartment-images__wrapper-price::after {
   content: '';
   position: absolute;
@@ -92,6 +103,16 @@
     font-size: 40px;
   }
 }
+@media (max-width: 600px) {
+  .apartment-images__current-price {
+    font-size: 30px;
+  }
+}
+@media (max-width: 400px) {
+  .apartment-images__current-price {
+    font-size: 20px;
+  }
+}
 .apartment-images__old-price {
   color: #FFF;
   font-family: 'FuturaPT';
@@ -103,6 +124,16 @@
 @media (max-width: 780px) {
   .apartment-images__old-price {
     font-size: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .apartment-images__old-price {
+    font-size: 24px;
+  }
+}
+@media (max-width: 400px) {
+  .apartment-images__old-price {
+    font-size: 14px;
   }
 }
 .apartment-images__img {

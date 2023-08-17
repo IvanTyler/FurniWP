@@ -56,8 +56,26 @@
 @media (max-width: 780px) {
   .personal-design-project__body {
     grid-template-columns: 1fr;
+    grid-template-rows: auto 122px auto;
     grid-template-areas: 'apartment-images' 'title ' 'paragraph' 'discuss-project';
     padding: 40px;
+  }
+}
+@media (max-width: 700px) {
+  .personal-design-project__body {
+    padding: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .personal-design-project__body {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
+}
+@media (max-width: 325px) {
+  .personal-design-project__body {
+    grid-template-rows: auto 152px auto;
   }
 }
 .personal-design-project__corner {
@@ -83,10 +101,31 @@
     height: 24%;
   }
 }
+@media (max-width: 600px) {
+  .personal-design-project__corner {
+    height: 23%;
+  }
+}
+@media (max-width: 550px) {
+  .personal-design-project__corner {
+    height: 22%;
+  }
+}
+@media (max-width: 500px) {
+  .personal-design-project__corner {
+    border: none;
+  }
+}
 .personal-design-project__corner::after,
 .personal-design-project__corner::before {
   content: '';
   position: absolute;
+}
+@media (max-width: 500px) {
+  .personal-design-project__corner::after,
+  .personal-design-project__corner::before {
+    display: none;
+  }
 }
 .personal-design-project__corner::before {
   z-index: -17;
@@ -142,6 +181,13 @@
   border-top-left-radius: 30px;
   box-shadow: -11px -11px 0px 3px #EFF2FD;
   transform: rotate(91deg);
+}
+@media (max-width: 500px) {
+  .personal-design-project__corner-top,
+  .personal-design-project__corner-bottom,
+  .personal-design-project__corner-right {
+    display: none;
+  }
 }
 .personal-design-project__title {
   grid-area: title;
@@ -217,4 +263,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 148%;
+}
+.container-personal-design-project {
+  padding-top: 56px;
 }

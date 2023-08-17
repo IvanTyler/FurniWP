@@ -29,6 +29,7 @@
 
         @media (max-width: 780px) {
             grid-template-columns: 1fr;
+            grid-template-rows: auto 122px auto;
             grid-template-areas:
                 'apartment-images'
                 'title '
@@ -37,44 +38,21 @@
             padding: 40px;
         }
 
-        // &::before,
-        // &::after {
-        //     content: '';
-        //     position: absolute;
-        //     z-index: -1;
-        // }
+        @media (max-width: 700px) {
+            padding: 20px;
+        }
 
-        // &::before {
-        //     top: 0;
-        //     left: 0;
-        //     bottom: 0;
-        //     width: calc(100% - 208px);
-        //     background-color: #fff;
-        //     border: 2px solid #E4E8F7;
-        //     border-radius: 20px 20px 0 20px;
-        //     border-right: none;
+        @media (max-width: 500px) {
+            padding: 0;
+            background-color: transparent;
+            border: none;
+        }
 
-        //     @media (max-width: 780px) {
-        //         width: calc(100% - 300px);
-        //     }
-        // }
+        @media (max-width: 325px) {
+            grid-template-rows: auto 152px auto;
 
-        // &::after {
-        //     right: 0;
-        //     bottom: 0;
-        //     width: 212px;
-        //     height: calc(100% - 137px);
-        //     background-color: #fff;
-        //     border: 2px solid #E4E8F7;
-        //     border-left: none;
-        //     border-radius: 0 20px 20px 0;
-        //     border-top: none;
+        }
 
-        //     @media (max-width: 780px) {
-        //         width: 300px;
-        //         height: calc(100% - 195px);
-        //     }
-        // }
     }
 
     &__corner {
@@ -98,10 +76,26 @@
             height: 24%;
         }
 
+        @media (max-width: 600px) {
+            height: 23%;
+        }
+
+        @media (max-width: 550px) {
+            height: 22%;
+        }
+
+        @media (max-width: 500px) {
+            border: none;
+        }
+
         &::after,
         &::before {
             content: '';
             position: absolute;
+
+            @media (max-width: 500px) {
+                display: none;
+            }
         }
 
         &::before {
@@ -163,6 +157,14 @@
         border-top-left-radius: 30px;
         box-shadow: -11px -11px 0px 3px #EFF2FD;
         transform: rotate(91deg);
+    }
+
+    &__corner-top,
+    &__corner-bottom,
+    &__corner-right {
+        @media (max-width: 500px) {
+            display: none;
+        }
     }
 
     &__title {
@@ -231,4 +233,6 @@
     }
 }
 
-.container-personal-design-project {}
+.container-personal-design-project {
+    padding-top: 56px;
+}
