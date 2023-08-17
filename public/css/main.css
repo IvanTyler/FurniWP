@@ -80,7 +80,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   background-color: #FFF;
   transition: box-shadow 0.2s;
 }
@@ -104,7 +104,7 @@ body {
   background-color: #CE1A30;
   color: #fff;
 }
-@media (max-width: 1030px) {
+@media (max-width: 1060px) {
   .header__request {
     display: none;
   }
@@ -386,49 +386,53 @@ body {
   padding: 16px 16px 16px 50px;
   gap: 0 61px;
   border-radius: 20px;
+  border: solid 2px #E4E8F7;
   z-index: 1;
-}
-.personal-design-project__body::before,
-.personal-design-project__body::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-}
-.personal-design-project__body::before {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: calc(100% - 208px);
   background-color: #fff;
-  border: 2px solid #E4E8F7;
-  border-radius: 20px 20px 0 20px;
-  border-right: none;
 }
-.personal-design-project__body::after {
-  right: 0;
-  bottom: 0;
-  width: 212px;
-  height: calc(100% - 131px);
-  background-color: #fff;
-  border: 2px solid #E4E8F7;
-  border-left: none;
-  border-radius: 0 20px 20px 0;
-  border-top: none;
+@media (max-width: 1060px) {
+  .personal-design-project__body {
+    grid-template-rows: auto 90px auto;
+    padding: 16px 16px 16px 25px;
+    gap: 0 20px;
+  }
+}
+@media (max-width: 780px) {
+  .personal-design-project__body {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'apartment-images' 'title ' 'paragraph' 'discuss-project';
+    padding: 40px;
+  }
 }
 .personal-design-project__corner {
   position: absolute;
-  top: 15px;
-  right: 14px;
+  top: -2px;
+  right: -2px;
   border: 2px solid #E4E8F7;
-  width: 192px;
-  height: 115px;
+  background-color: #EFF2FD;
+  width: 208px;
+  height: 138px;
   border-bottom-left-radius: 30px;
   border-top: 0;
   border-right: none;
 }
+@media (max-width: 780px) {
+  .personal-design-project__corner {
+    width: 44%;
+    height: 25%;
+  }
+}
+@media (max-width: 770px) {
+  .personal-design-project__corner {
+    height: 24%;
+  }
+}
+.personal-design-project__corner::after,
 .personal-design-project__corner::before {
   content: '';
   position: absolute;
+}
+.personal-design-project__corner::before {
   z-index: -17;
   bottom: -1px;
   left: -2px;
@@ -440,16 +444,47 @@ body {
   transform: rotate(-93deg);
 }
 .personal-design-project__corner::after {
-  content: '';
-  position: absolute;
   z-index: 1;
-  top: -14px;
-  left: -22px;
+  top: 1px;
+  left: -21px;
   width: 20px;
   height: 20px;
   background-color: transparent;
   border-top-left-radius: 20px;
   box-shadow: -1px -1px 0px 0px #E4E8F7;
+  transform: rotate(91deg);
+}
+.personal-design-project__corner-right {
+  position: absolute;
+  bottom: -21px;
+  right: 1px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-top-left-radius: 30px;
+  box-shadow: -1px -1px 0px 0px #E4E8F7;
+  transform: rotate(91deg);
+}
+.personal-design-project__corner-bottom {
+  position: absolute;
+  bottom: -21px;
+  right: -1px;
+  width: 23px;
+  height: 23px;
+  background-color: transparent;
+  border-top-left-radius: 30px;
+  box-shadow: -11px -11px 0px 3px #EFF2FD;
+  transform: rotate(91deg);
+}
+.personal-design-project__corner-top {
+  position: absolute;
+  top: 0;
+  left: -21px;
+  width: 23px;
+  height: 23px;
+  background-color: transparent;
+  border-top-left-radius: 30px;
+  box-shadow: -11px -11px 0px 3px #EFF2FD;
   transform: rotate(91deg);
 }
 .personal-design-project__title {
@@ -461,6 +496,18 @@ body {
   font-weight: 700;
   line-height: 126%;
 }
+@media (max-width: 1060px) {
+  .personal-design-project__title {
+    font-size: 38px;
+    line-height: 41px;
+  }
+}
+@media (max-width: 930px) {
+  .personal-design-project__title {
+    font-size: 30px;
+    line-height: 33px;
+  }
+}
 .personal-design-project__paragraph {
   margin-top: 16px;
   grid-area: paragraph;
@@ -470,12 +517,24 @@ body {
   font-weight: 400;
   line-height: 126%;
 }
+@media (max-width: 1060px) {
+  .personal-design-project__paragraph {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
 .personal-design-project__discuss-project {
   margin-top: 32px;
   align-self: start;
   grid-area: discuss-project;
   display: flex;
   gap: 24px;
+}
+@media (max-width: 930px) {
+  .personal-design-project__discuss-project {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 .personal-design-project__button {
   display: flex;
@@ -511,6 +570,13 @@ body {
   grid-template-areas: 'wrapper-img wrapper-img' 'img_1 img_2';
   gap: 16px;
 }
+@media (max-width: 780px) {
+  .apartment-images {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'wrapper-img';
+  }
+}
 .apartment-images__wrapper-img {
   position: relative;
   grid-column: 1 / span 2;
@@ -525,10 +591,27 @@ body {
   justify-content: center;
   text-align: center;
   width: 171px;
-  height: 115px;
-  background-image: url('../img/common/message-mini.png');
-  background-size: cover;
+  height: 105px;
+  background-color: #F7921C;
+  border-radius: 20px;
+}
+@media (max-width: 780px) {
+  .apartment-images__wrapper-price {
+    top: -25px;
+    width: 38%;
+    height: 32%;
+  }
+}
+.apartment-images__wrapper-price::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  transform: translateY(calc(100% - 0.4px));
+  width: 42.75px;
+  height: 9.364px;
+  background-image: url('../img/design-project/personal-design-project-in-dubai/corner.svg');
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .apartment-images__current-price {
   color: #FFF;
@@ -537,13 +620,23 @@ body {
   font-weight: 700;
   line-height: 126%;
 }
+@media (max-width: 780px) {
+  .apartment-images__current-price {
+    font-size: 40px;
+  }
+}
 .apartment-images__old-price {
   color: #FFF;
   font-family: 'FuturaPT';
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
-  text-decoration-line: through;
+  text-decoration-line: line-through;
+}
+@media (max-width: 780px) {
+  .apartment-images__old-price {
+    font-size: 32px;
+  }
 }
 .apartment-images__img {
   width: 100%;
@@ -554,6 +647,12 @@ body {
 }
 .apartment-images__img.img_2 {
   grid-area: img_2;
+}
+@media (max-width: 780px) {
+  .apartment-images__img.img_1,
+  .apartment-images__img.img_2 {
+    display: none;
+  }
 }
 .container-gallery-sets {
   display: grid;

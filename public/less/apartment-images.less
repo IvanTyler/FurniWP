@@ -11,6 +11,13 @@
         'img_1 img_2';
     gap: 16px;
 
+    @media (max-width: 780px) {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            'wrapper-img'
+    }
+
     &__wrapper-img {
         position: relative;
         grid-column: 1 / span 2;
@@ -26,10 +33,27 @@
         justify-content: center;
         text-align: center;
         width: 171px;
-        height: 115px;
-        background-image: url('../img/common/message-mini.png');
-        background-size: cover;
-        background-repeat: no-repeat;
+        height: 105px;
+        background-color: #F7921C;
+        border-radius: 20px;
+
+        @media (max-width: 780px) {
+            top: -25px;
+            width: 38%;
+            height: 32%;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            transform: translateY(calc(100% - 0.4px));
+            width: 42.75px;
+            height: 9.364px;
+            background-image: url('../img/design-project/personal-design-project-in-dubai/corner.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     }
 
     &__current-price {
@@ -38,6 +62,10 @@
         font-size: 32px;
         font-weight: 700;
         line-height: 126%;
+
+        @media (max-width: 780px) {
+            font-size: 40px;
+        }
     }
 
     &__old-price {
@@ -46,7 +74,11 @@
         font-size: 24px;
         font-weight: 400;
         line-height: 24px;
-        text-decoration-line: through;
+        text-decoration-line: line-through;
+
+        @media (max-width: 780px) {
+            font-size: 32px;
+        }
     }
 
     &__img {
@@ -60,5 +92,12 @@
 
     &__img.img_2 {
         grid-area: img_2;
+    }
+
+    &__img.img_1,
+    &__img.img_2 {
+        @media (max-width: 780px) {
+            display: none;
+        }
     }
 }

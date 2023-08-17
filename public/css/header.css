@@ -34,7 +34,7 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   background-color: #FFF;
   transition: box-shadow 0.2s;
 }
@@ -58,7 +58,7 @@
   background-color: #CE1A30;
   color: #fff;
 }
-@media (max-width: 1030px) {
+@media (max-width: 1060px) {
   .header__request {
     display: none;
   }
