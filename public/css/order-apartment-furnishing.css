@@ -1,0 +1,132 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+}
+.title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
+.order-apartment-furnishing {
+  background-color: #EFF2FD;
+}
+.order-apartment-furnishing__body {
+  display: grid;
+  grid-template-columns: minmax(auto, 428px) 1fr;
+  grid-template-areas: 'img title' 'img paragraph' 'img discuss-project';
+  border-radius: 20px;
+  border: 2px solid #E4E8F7;
+  background-color: #FFF;
+  padding: 48px 40px;
+  gap: 0 40px;
+}
+@media (max-width: 1030px) {
+  .order-apartment-furnishing__body {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'img' 'title' 'paragraph' 'discuss-project';
+  }
+}
+@media (max-width: 500px) {
+  .order-apartment-furnishing__body {
+    padding: 20px 20px 40px 20px;
+  }
+}
+.order-apartment-furnishing__img {
+  grid-area: img;
+  align-self: center;
+  max-width: 428px;
+}
+@media (max-width: 1030px) {
+  .order-apartment-furnishing__img {
+    max-width: 100%;
+  }
+}
+.order-apartment-furnishing__title {
+  grid-area: title;
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 700px) {
+  .order-apartment-furnishing__title {
+    font-size: 32px;
+    margin-top: 24px;
+  }
+}
+.order-apartment-furnishing__paragraph {
+  margin-top: 12px;
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 126%;
+}
+@media (max-width: 700px) {
+  .order-apartment-furnishing__paragraph {
+    font-size: 16px;
+  }
+}
+.order-apartment-furnishing__discuss-project {
+  margin-top: 32px;
+  grid-area: discuss-project;
+  display: flex;
+  align-self: center;
+  gap: 24px;
+}
+@media (max-width: 500px) {
+  .order-apartment-furnishing__discuss-project {
+    flex-direction: column;
+    align-items: start;
+    margin-top: 24px;
+  }
+}
+.order-apartment-furnishing__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+  background-color: #CE1A30;
+  color: #fff;
+}
+.order-apartment-furnishing__whapsApp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 148%;
+}

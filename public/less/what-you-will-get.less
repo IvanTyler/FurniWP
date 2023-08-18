@@ -1,0 +1,28 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.what-you-will-get {
+    background-color: #fff;
+
+    &__title {
+        .title();
+        text-align: center;
+    }
+
+    &__button {
+        .button();
+        color: #fff;
+        background-color: @var-mainColor;
+        justify-self: center;
+    }
+}
+
+.container-what-you-will-get {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    @media (max-width: 680px) {
+        gap: 32px;
+    }
+}

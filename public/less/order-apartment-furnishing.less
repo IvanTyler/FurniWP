@@ -1,0 +1,103 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.order-apartment-furnishing {
+    background-color: #EFF2FD;
+
+    &__body {
+        display: grid;
+        grid-template-columns: minmax(auto, 428px) 1fr;
+        grid-template-areas:
+            'img title'
+            'img paragraph'
+            'img discuss-project';
+        border-radius: 20px;
+        border: 2px solid #E4E8F7;
+        background-color: #FFF;
+        padding: 48px 40px;
+        gap: 0 40px;
+
+        @media (max-width: 1030px) {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                'img'
+                'title'
+                'paragraph'
+                'discuss-project';
+        }
+
+        @media (max-width: 500px) {
+            padding: 20px 20px 40px 20px;
+        }
+    }
+
+    &__img {
+        grid-area: img;
+        align-self: center;
+        max-width: 428px;
+
+        @media (max-width: 1030px) {
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        grid-area: title;
+        color: #11172E;
+        font-family: @var-mainFont;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 126%;
+
+        @media (max-width: 700px) {
+            font-size: 32px;
+            margin-top: 24px;
+        }
+    }
+
+    &__paragraph {
+        margin-top: 12px;
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 126%;
+
+        @media (max-width: 700px) {
+            font-size: 16px;
+        }
+    }
+
+    &__discuss-project {
+        margin-top: 32px;
+        grid-area: discuss-project;
+        display: flex;
+        align-self: center;
+        gap: 24px;
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+            align-items: start;
+            margin-top: 24px;
+        }
+    }
+
+    &__button {
+        .button();
+        background-color: @var-mainColor;
+        color: #fff;
+    }
+
+    &__whapsApp {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 148%;
+    }
+}
+
+.container-order-apartment {}

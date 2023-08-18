@@ -1,0 +1,73 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.what-you-will-get-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    &__title,
+    &__number {
+        font-family: @var-mainFont;
+        font-size: 32px;
+        font-weight: 450;
+        line-height: 126%;
+
+        @media (max-width: 680px) {
+            font-size: 20px;
+        }
+    }
+
+    &__title {
+        grid-area: title;
+        color: #262830;
+    }
+
+    &__item {
+        position: relative;
+        display: grid;
+        grid-template-columns: 24px 1fr 1fr;
+        align-items: center;
+        grid-template-areas:
+            'number title img';
+        gap: 30px;
+        padding: 48px 40px;
+        border-radius: 16px;
+        border: 2px solid #E4E8F7;
+        background-color: #EFF2FD;
+
+        @media (max-width: 680px) {
+            grid-template-columns: 8px 1fr;
+            align-items: center;
+            grid-template-areas:
+                'number title'
+                'number img';
+            padding: 24px;
+        }
+    }
+
+    &__number {
+        grid-area: number;
+        color: #B3B9D1;
+
+        @media (max-width: 680px) {
+            align-self: start;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        grid-area: img;
+        justify-self: end;
+        margin-bottom: -48px;
+
+        @media (max-width: 680px) {
+            position: static;
+            justify-self: center;
+            margin-left: -48px;
+            margin-bottom: -24px;
+        }
+    }
+
+}

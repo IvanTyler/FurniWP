@@ -51,6 +51,9 @@
     font-size: 32px;
   }
 }
+.make-a-request .design-project-title {
+  color: #11172E;
+}
 .make-a-request__sub-title {
   margin-top: 16px;
   color: #E0E0E0;
@@ -59,6 +62,12 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 126%;
+}
+.make-a-request .design-project-sub-title {
+  color: #262830;
+}
+.design-project-item {
+  background-color: #fff;
 }
 .container-make-a-request {
   display: flex;
@@ -93,6 +102,10 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 126%;
+}
+.make-a-request-form .design-project-input {
+  border: 2px solid #E4E8F7;
+  background-color: #EFF2FD;
 }
 .make-a-request-form__input.phone {
   padding-left: 52px;
