@@ -1,0 +1,120 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.design-project-cost {
+    background-color: #EFF2FD;
+
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr 266px;
+        gap: 40px;
+        grid-template-areas:
+            'title wrapper-price'
+            'design-project-cost-list design-project-cost-list';
+        background-color: #fff;
+        padding: 56px;
+        border-radius: 20px;
+        border: 2px solid #E4E8F7;
+
+        @media (max-width: 1030px) {
+            padding: 56px 40px;
+        }
+
+        @media (max-width: 800px) {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                'wrapper-price'
+                'title'
+                'design-project-cost-list';
+            gap: 0;
+        }
+
+        @media (max-width: 430px) {
+            padding: 20px 20px 48px 20px;
+        }
+    }
+
+    &__title {
+        grid-area: title;
+        .title();
+
+        @media (max-width: 800px) {
+            margin-top: 32px;
+        }
+    }
+
+    &__wrapper-price {
+        position: relative;
+        grid-area: wrapper-price;
+        display: grid;
+        grid-template-columns: 75px 1fr;
+        grid-template-areas:
+            'current-price old-price'
+            'text text';
+        width: 275px;
+        height: 90px;
+        justify-self: end;
+        padding: 16px 24px;
+        background-color: #F7921C;
+        border-radius: 20px;
+        gap: 0 8px;
+
+        @media (max-width: 800px) {
+            justify-self: start;
+        }
+
+        @media (max-width: 430px) {
+            width: 220px;
+            padding: 16px 20px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 21.5px);
+            transform: translateY(calc(100% - 0.4px));
+            width: 43px;
+            height: 10px;
+            background-image: url('../img/design-project/personal-design-project-in-dubai/corner.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &__current-price {
+        align-self: center;
+        grid-area: current-price;
+        color: #FFF;
+        font-family: @var-mainFont;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 126%;
+    }
+
+    &__old-price,
+    &__text {
+        grid-area: old-price;
+        color: #FFF;
+        font-family: @var-mainFont;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 126%;
+
+        @media (max-width: 430px) {
+            font-size: 12px;
+        }
+    }
+
+    &__old-price {
+        text-decoration-line: line-through;
+        align-self: center;
+    }
+
+    &__text {
+        grid-area: text;
+        align-self: start;
+    }
+}
+
+.container-project-cost {}
