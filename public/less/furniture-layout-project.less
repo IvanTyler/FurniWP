@@ -1,0 +1,21 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.furniture-layout-project {
+
+    &__title {
+        .title();
+    }
+
+    &__img {
+        max-width: 838px;
+        width: 100%;
+    }
+}
+
+.container-furniture-layout-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}

@@ -1,0 +1,26 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.approved-furniture-estimate {
+
+    &__title {
+        .title();
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 1000px;
+    }
+}
+
+.container-approved-furniture-estimate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-top: 0;
+
+    @media (max-width: 500px) {
+        gap: 32px;
+    }
+}
