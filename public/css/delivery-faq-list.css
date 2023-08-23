@@ -1,0 +1,94 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+}
+.title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
+.delivery-faq-list {
+  margin-top: 40px;
+}
+.delivery-faq-list__item {
+  display: grid;
+  grid-template-columns: 1fr 36px;
+  grid-template-areas: 'text toggle-text' 'sub-text sub-text';
+  gap: 12px 8px;
+  padding: 16px 0;
+  border-bottom: solid 1px #E4E8F7;
+}
+.delivery-faq-list__text {
+  grid-area: text;
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 126%;
+}
+@media (max-width: 450px) {
+  .delivery-faq-list__text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .delivery-faq-list__text {
+    font-size: 16px;
+  }
+}
+.delivery-faq-list__sub-text {
+  display: none;
+  grid-area: sub-text;
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 126%;
+}
+.delivery-faq-list__toggle-text {
+  align-items: start;
+  grid-area: toggle-text;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-image: url('../icon/common/plus.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.delivery-faq-list__toggle-text:hover {
+  background-color: #CE1A30;
+  background-image: url('../icon/common/plus-white.svg');
+}
+.delivery-faq-list__toggle-text.active + .delivery-faq-list__sub-text {
+  display: block;
+}
+.delivery-faq-list__toggle-text.active {
+  transform: rotate(-45deg);
+}
+.delivery-faq-list__toggle-text.active:hover {
+  background-image: url('../icon/common/plus-white.svg');
+}

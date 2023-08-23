@@ -3,13 +3,22 @@ const slide_images = document.querySelectorAll('.slider__img')
 function slideGalleryImg(images, i) {
     setInterval(() => {
         images.forEach(el => el.classList?.remove('active'))
-        images[i].classList?.add('active')
+        images[i]?.classList?.add('active')
         i++
         i = i % images.length
     }, 5000)
 }
 
 slideGalleryImg(slide_images, 0)
+const $deliveryAnswerList = document.querySelector('.delivery-faq-list')
+
+$deliveryAnswerList.addEventListener('click', (e) => {
+    e.target.className === 'delivery-faq-list__toggle-text' ?
+        e.target.classList.add('active') :
+        e.target.classList.remove('active')
+})
+
+
 const $header = document.querySelector('.header')
 
 window.addEventListener('scroll', () => {
