@@ -29,6 +29,21 @@
     font-size: 32px;
   }
 }
+.input {
+  height: 64px;
+  padding: 0 20px;
+  border-radius: 16px;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 126%;
+}
+.input-phone {
+  padding-left: 52px;
+  background-image: url('../../public/img/make-a-request/UAE.png');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
 .service-furni {
   grid-area: service;
   display: grid;

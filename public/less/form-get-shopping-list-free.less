@@ -1,0 +1,36 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.form-get-shopping-list-free {
+    display: grid;
+    grid-template-columns: calc(35% - 12px) calc(35% - 12px) calc(30% - 12px);
+    gap: 12px;
+    grid-area: form;
+    margin-top: 32px;
+
+    @media (max-width:1200px) {
+        grid-template-columns: 100%;
+        margin-top: 0;
+    }
+
+    @media (max-width:940px) {
+        margin-top: 32px;
+    }
+
+    &__input {
+        .input();
+        border: 2px solid #D8DEF3;
+        background-color: #FFF;
+    }
+
+    &__input.phone {
+        .input-phone();
+    }
+
+    &__button {
+        .button();
+        height: 64px;
+        color: #fff;
+        background-color: @var-mainColor;
+    }
+}

@@ -1,0 +1,106 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.container-shopping-list-free {}
+
+.get-shopping-list-free {
+    background-color: #fff;
+
+    &__body {
+        display: grid;
+        padding: 80px 64px;
+        grid-template-columns: minmax(auto, 664px) 1fr;
+        grid-template-areas:
+            'title img'
+            'sub-title img'
+            'form img';
+        border-radius: 24px;
+        border: 2px solid #E4E8F7;
+        background-color: #EFF2FD;
+
+        @media (max-width: 1200px) {
+            padding: 40px 48px;
+            grid-template-columns: 1fr minmax(auto, 154px) 1fr;
+            grid-template-areas:
+                'title img form'
+                'sub-title sub-title form'
+                'sub-title sub-title form';
+        }
+
+        @media (max-width: 940px) {
+            grid-template-columns: 1fr minmax(auto, 202px);
+            grid-template-areas:
+                'title img'
+                'sub-title sub-title'
+                'form form';
+        }
+
+        @media (max-width: 670px) {
+            padding: 40px 24px;
+        }
+    }
+
+    &__title {
+        grid-area: title;
+        .title();
+        line-height: 49px;
+
+        @media (max-width: 1200px) {
+            margin-right: 15px;
+        }
+
+        @media (max-width: 940px) {
+            max-width: 350px;
+        }
+
+        @media (max-width: 670px) {
+            max-width: initial;
+            grid-column: 1 / span 2;
+            margin-right: 0;
+        }
+
+    }
+
+    &__sub-title {
+        margin-top: 16px;
+        grid-area: sub-title;
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 126%;
+
+        @media (max-width: 1200px) {
+            grid-column: 1 / span 2;
+            margin-right: 32px;
+        }
+
+        @media (max-width: 940px) {
+            margin-right: 0;
+        }
+    }
+
+    &__img {
+        grid-area: img;
+        margin-top: -120px;
+        margin-bottom: -62px;
+        margin-right: -112px;
+        justify-self: flex-end;
+
+        @media (max-width: 1200px) {
+            margin-top: -31px;
+            margin-bottom: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 940px) {
+            margin-top: -80px;
+            margin-bottom: -16px;
+        }
+
+        @media (max-width: 670px) {
+            display: none;
+        }
+    }
+}
