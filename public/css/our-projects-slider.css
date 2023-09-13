@@ -1,0 +1,116 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  height: 40px;
+  text-align: center;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  border-radius: 88px;
+  cursor: pointer;
+}
+.title {
+  color: #11172E;
+  font-family: 'FuturaPT';
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 126%;
+}
+@media (max-width: 1030px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+}
+.input {
+  height: 64px;
+  padding: 0 20px;
+  border-radius: 16px;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 126%;
+}
+.input-phone {
+  padding-left: 52px;
+  background-image: url('../../public/img/make-a-request/UAE.png');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+.our-projects-slider {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(292px, auto));
+  margin-top: 92px;
+  transition: 0.3s;
+}
+.our-projects-slider__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: end;
+  transform: scale(0.85);
+  gap: 9px;
+  padding: 19px 12px;
+  height: 482px;
+  border-radius: 6.4px;
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all ease-in-out 0.3s;
+}
+.our-projects-slider__item::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.48) 65%);
+  height: 176px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+.our-projects-slider__item:nth-child(1) {
+  background-image: url('../img/our-projects/img_1.png');
+}
+.our-projects-slider__item:nth-child(2) {
+  background-image: url('../img/our-projects/img_2.png');
+}
+.our-projects-slider__item:nth-child(3) {
+  background-image: url('../img/our-projects/img_3.png');
+}
+.our-projects-slider__item:nth-child(4) {
+  background-image: url('../img/our-projects/img_4.png');
+}
+.our-projects-slider__item.active {
+  transform: scale(1);
+}
+.our-projects-slider__description {
+  color: #FFF;
+  font-family: 'FuturaPT';
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 126%;
+}
+.our-projects-slider__button {
+  display: flex;
+  padding: 0 16px;
+  justify-content: center;
+  align-items: center;
+  justify-self: start;
+  height: 40px;
+  border-radius: 88px;
+  background-color: #FFF;
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 126%;
+}

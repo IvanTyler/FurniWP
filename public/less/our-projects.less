@@ -1,0 +1,43 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.our-projects {
+    background-color: #EFF2FD;
+
+    &__title {
+        .title();
+        text-align: center;
+        color: #11172E;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__wrapper-slider {
+        width: 292px;
+        margin: 0 auto;
+    }
+
+    &__arrow {
+        position: absolute;
+        z-index: 1;
+        top: calc(50% - 19px);
+        cursor: pointer;
+    }
+
+    &__arrow.prev-slide {
+        left: 187px;
+        transform: rotate(180deg);
+    }
+
+    &__arrow.next-slide {
+        right: 187px;
+    }
+}
+
+.container-our-project {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}

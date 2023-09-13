@@ -1,0 +1,21 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.our-projects-slider-switch {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    max-width: 608px;
+    margin: 56px auto 0;
+
+    &__item {
+        height: 6px;
+        border-radius: 8px;
+        background-color: #D8DEF3;
+        cursor: pointer;
+    }
+
+    &__item.active {
+        background-color: #B3B9D1;
+    }
+}

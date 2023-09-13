@@ -1,0 +1,84 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.our-projects-slider {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(292px, auto));
+    // gap: 39.14px;
+    margin-top: 92px;
+    transition: 0.3s;
+
+    &__item {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-items: end;
+        transform: scale(0.85);
+        gap: 9px;
+        padding: 19px 12px;
+        height: 482px;
+        border-radius: 6.4px;
+        background-color: #FFF;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all ease-in-out 0.3s;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.48) 65%);
+            height: 176px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+
+        &:nth-child(1) {
+            background-image: url('../img/our-projects/img_1.png');
+        }
+
+        &:nth-child(2) {
+            background-image: url('../img/our-projects/img_2.png');
+        }
+
+        &:nth-child(3) {
+            background-image: url('../img/our-projects/img_3.png');
+        }
+
+        &:nth-child(4) {
+            background-image: url('../img/our-projects/img_4.png');
+        }
+    }
+
+    &__item.active {
+        transform: scale(1);
+    }
+
+    &__description {
+        color: #FFF;
+        font-family: @var-mainFont;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 126%;
+    }
+
+    &__button {
+        display: flex;
+        padding: 0 16px;
+        justify-content: center;
+        align-items: center;
+        justify-self: start;
+        height: 40px;
+        border-radius: 88px;
+        background-color: #FFF;
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 126%;
+    }
+}
