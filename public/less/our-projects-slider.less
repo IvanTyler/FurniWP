@@ -4,9 +4,12 @@
 .our-projects-slider {
     display: grid;
     grid-template-columns: repeat(4, minmax(292px, auto));
-    // gap: 39.14px;
     margin-top: 92px;
     transition: 0.3s;
+
+    @media (max-width: 360px) {
+        grid-template-columns: repeat(4, minmax(270px, auto));
+    }
 
     &__item {
         position: relative;
@@ -23,6 +26,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         transition: all ease-in-out 0.3s;
+        cursor: pointer;
 
         &::after {
             content: '';
