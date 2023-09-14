@@ -48,7 +48,7 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(292px, auto));
   margin-top: 92px;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 @media (max-width: 360px) {
   .our-projects-slider {
@@ -69,7 +69,7 @@
   background-color: #FFF;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.5s;
   cursor: pointer;
 }
 .our-projects-slider__item::after {
@@ -82,6 +82,7 @@
   right: 0;
   left: 0;
   z-index: -1;
+  border-radius: 0 0 6.4px 6.4px;
 }
 .our-projects-slider__item:nth-child(1) {
   background-image: url('../img/our-projects/img_1.png');
@@ -119,4 +120,5 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 126%;
+  cursor: pointer;
 }
