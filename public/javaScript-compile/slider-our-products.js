@@ -6,6 +6,7 @@ const $prev_slide = document.querySelector('.our-projects__arrow.prev-slide')
 const $next_slide = document.querySelector('.our-projects__arrow.next-slide')
 
 const $slider_switch = document.querySelectorAll('.our-projects-slider-switch__item')
+const $slider_switch_progress_items = document.querySelectorAll('.our-projects-slider-switch__progress')
 
 const $our_projects_videos = document.querySelectorAll('.our-projects-video')
 const $our_projects_open_modal = document.querySelectorAll('.our-projects-slider__button')
@@ -16,6 +17,63 @@ const $close_modal_main = document.querySelector('.modal-main__close')
 
 let count = 0;
 let width = 0;
+
+
+function progressStoris(number) {
+    let percentProgress = 100
+    count = number
+    width = 0
+
+    $slider_switch_progress_items.forEach((el) => el.style.width = '0%')
+
+    for (let i = 0; i < count; i++) {
+        width = width + $slide_item.offsetWidth
+        $slider_switch_progress_items[i].style.width = '100%'
+    }
+
+    $slide_items.forEach((el, i) => {
+        el.classList.remove('active')
+        $slide_items[count].classList.add('active')
+    })
+
+
+    for (let i = 0; i <= percentProgress; i++) {
+        let index = setTimeout(() => {
+            $slider_switch_progress_items[count].style.width = `${i}%`
+            clearTimeout(index);
+
+            if (i === percentProgress && count < $slide_items.length - 1) {
+                count++
+
+                console.log('count>>>', count);
+                console.log('done', i);
+
+                nextSlide()
+                rollSlider()
+                progressStoris(count)
+
+            }
+
+        }, 30 * i)
+    }
+
+    rollSlider()
+
+    if (count > 0) {
+
+        $prev_slide.classList.remove('hide')
+
+    }
+
+    if (count === $slide_items.length - 1) {
+        $next_slide.classList.add('hide')
+        return
+    }
+}
+
+
+progressStoris(0)
+
 
 function nextSlide() {
     let currentElement;
@@ -85,6 +143,8 @@ $slide_items?.forEach((el, i) => {
         $slider_switch[i].classList.add('active')
         el.classList.add('active')
         setCurrentWidtSlider(i)
+        progressStoris(i)
+
     })
 })
 
@@ -99,6 +159,8 @@ $slider_switch?.forEach((el, i) => {
         $slide_items[i].classList.add('active')
         el.classList.add('active')
         setCurrentWidtSlider(i)
+        progressStoris(i)
+
     })
 })
 
