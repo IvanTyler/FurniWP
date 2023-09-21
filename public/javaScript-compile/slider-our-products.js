@@ -18,6 +18,7 @@ const $close_modal_main = document.querySelector('.modal-main__close')
 let count = 0;
 let width = 0;
 
+const currentIndexs = []
 
 function progressStoris(number) {
     let percentProgress = 100
@@ -36,15 +37,11 @@ function progressStoris(number) {
         $slide_items[count].classList.add('active')
     })
 
-
     for (let i = 0; i <= percentProgress; i++) {
         let index = setTimeout(() => {
             $slider_switch_progress_items[count].style.width = `${i}%`
-            clearTimeout(index);
-
             if (i === percentProgress && count < $slide_items.length - 1) {
                 count++
-
                 console.log('count>>>', count);
                 console.log('done', i);
 
@@ -53,16 +50,15 @@ function progressStoris(number) {
                 progressStoris(count)
 
             }
-
         }, 30 * i)
+        currentIndexs.push(index)
     }
+
 
     rollSlider()
 
     if (count > 0) {
-
         $prev_slide.classList.remove('hide')
-
     }
 
     if (count === $slide_items.length - 1) {
@@ -103,6 +99,14 @@ function prevSlide() {
 $next_slide?.addEventListener('click', () => {
     count++
     width = width + $slide_item.offsetWidth
+    $slider_switch_progress_items.forEach((el) => el.style.width = '0%')
+    currentIndexs.forEach((el) => clearTimeout(el))
+
+    progressStoris(count)
+
+    for (let i = 0; i < count; i++) {
+        $slider_switch_progress_items[i].style.width = '100%'
+    }
 
     if (count === $slide_items.length - 1) $next_slide.classList.add('hide')
     if (count > 0) $prev_slide.classList.remove('hide')
@@ -119,6 +123,13 @@ $next_slide?.addEventListener('click', () => {
 $prev_slide?.addEventListener('click', () => {
     count--
     width = width - $slide_item.offsetWidth
+    $slider_switch_progress_items.forEach((el) => el.style.width = '0%')
+    currentIndexs.forEach((el) => clearTimeout(el))
+
+    progressStoris(count)
+    for (let i = 0; i < count; i++) {
+        $slider_switch_progress_items[i].style.width = '100%'
+    }
 
     if (count === 0) $prev_slide.classList.add('hide')
     if (count < $slide_items.length - 1) $next_slide.classList.remove('hide')
@@ -142,6 +153,8 @@ $slide_items?.forEach((el, i) => {
         })
         $slider_switch[i].classList.add('active')
         el.classList.add('active')
+        currentIndexs.forEach((el) => clearTimeout(el))
+
         setCurrentWidtSlider(i)
         progressStoris(i)
 
@@ -158,6 +171,8 @@ $slider_switch?.forEach((el, i) => {
         })
         $slide_items[i].classList.add('active')
         el.classList.add('active')
+
+        currentIndexs.forEach((el) => clearTimeout(el))
         setCurrentWidtSlider(i)
         progressStoris(i)
 
