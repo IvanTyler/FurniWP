@@ -144,18 +144,11 @@ function progressStoris(number) {
         $slider_switch_progress_items[i].style.width = '100%'
     }
 
-    $slide_items.forEach((el, i) => {
-        el.classList.remove('active')
-        $slide_items[count].classList.add('active')
-    })
-
     for (let i = 0; i <= percentProgress; i++) {
         let index = setTimeout(() => {
             $slider_switch_progress_items[count].style.width = `${i}%`
             if (i === percentProgress && count < $slide_items.length - 1) {
                 count++
-                console.log('count>>>', count);
-                console.log('done', i);
 
                 nextSlide()
                 rollSlider()
@@ -165,7 +158,6 @@ function progressStoris(number) {
         }, 30 * i)
         currentIndexs.push(index)
     }
-
 
     rollSlider()
 
@@ -178,8 +170,6 @@ function progressStoris(number) {
         return
     }
 }
-
-
 progressStoris(0)
 
 
@@ -211,14 +201,9 @@ function prevSlide() {
 $next_slide?.addEventListener('click', () => {
     count++
     width = width + $slide_item.offsetWidth
-    $slider_switch_progress_items.forEach((el) => el.style.width = '0%')
+
     currentIndexs.forEach((el) => clearTimeout(el))
-
     progressStoris(count)
-
-    for (let i = 0; i < count; i++) {
-        $slider_switch_progress_items[i].style.width = '100%'
-    }
 
     if (count === $slide_items.length - 1) $next_slide.classList.add('hide')
     if (count > 0) $prev_slide.classList.remove('hide')
@@ -235,13 +220,10 @@ $next_slide?.addEventListener('click', () => {
 $prev_slide?.addEventListener('click', () => {
     count--
     width = width - $slide_item.offsetWidth
-    $slider_switch_progress_items.forEach((el) => el.style.width = '0%')
+
     currentIndexs.forEach((el) => clearTimeout(el))
 
     progressStoris(count)
-    for (let i = 0; i < count; i++) {
-        $slider_switch_progress_items[i].style.width = '100%'
-    }
 
     if (count === 0) $prev_slide.classList.add('hide')
     if (count < $slide_items.length - 1) $next_slide.classList.remove('hide')
