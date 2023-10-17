@@ -44,7 +44,29 @@
   background-repeat: no-repeat;
   background-position: 20px center;
 }
-.furni-information__title {
+.payment__body {
+  display: grid;
+  grid-template-columns: 192px 1fr;
+  justify-content: space-between;
+  padding: 56px;
+  gap: 96px;
+  border-radius: 20px;
+  border: 2px solid #E4E8F7;
+  background-color: #EFF2FD;
+}
+@media (max-width: 800px) {
+  .payment__body {
+    gap: 50px;
+  }
+}
+@media (max-width: 730px) {
+  .payment__body {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 32px 20px;
+  }
+}
+.payment__title {
   color: #11172E;
   font-family: 'FuturaPT';
   font-size: 46px;
@@ -52,15 +74,25 @@
   line-height: 126%;
 }
 @media (max-width: 1030px) {
-  .furni-information__title {
+  .payment__title {
     font-size: 40px;
   }
 }
 @media (max-width: 500px) {
-  .furni-information__title {
+  .payment__title {
     font-size: 32px;
   }
 }
-.container-furni-information {
-  max-width: 808px;
+.payment__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.payment__paragraph,
+.payment__text {
+  color: #262830;
+  font-family: 'FuturaPT';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 126%;
 }

@@ -10,13 +10,20 @@ function slideGalleryImg(images, i) {
 }
 
 slideGalleryImg(slide_images, 0)
-const $deliveryAnswerList = document.querySelector('.delivery-faq-list')
+const $deliveryAnswerList = document.querySelector('.furni-information-list.delivery-faq')
+const $deliveryPrivacyPolicy = document.querySelector('.furni-information-list.privacy-policy')
 
-$deliveryAnswerList?.addEventListener('click', (e) => {
-    e.target.className === 'delivery-faq-list__toggle-text' ?
-        e.target.classList.add('active') :
-        e.target.classList.remove('active')
-})
+
+function openInformationListItem(collection) {
+    collection?.addEventListener('click', (e) => {
+        e.target.className === 'furni-information-list__toggle-text' ?
+            e.target.classList.add('active') :
+            e.target.classList.remove('active')
+    })
+}
+
+openInformationListItem($deliveryAnswerList)
+openInformationListItem($deliveryPrivacyPolicy)
 
 
 const $header = document.querySelector('.header')
@@ -170,7 +177,8 @@ function progressStoris(number) {
         return
     }
 }
-progressStoris(0)
+
+if ($slider) progressStoris(0)
 
 
 function nextSlide() {
@@ -293,7 +301,8 @@ function setCurrentWidtSlider(index) {
 function rollSlider() {
     $slider.style.transform = 'translate(-' + width + 'px)'
 }
-window.addEventListener('resize', rollSlider)
+
+if ($slider) window.addEventListener('resize', rollSlider)
 
 $our_projects_open_modal?.forEach((el, i) => {
     el.addEventListener('click', () => {

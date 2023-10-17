@@ -1,0 +1,38 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.page-not-found {
+    background-color: #000;
+
+    &__img {
+        max-width: 533px;
+        width: 100%;
+    }
+
+    &__title {
+        margin-top: 40px;
+        .title();
+        color: #E0E0E0;
+    }
+
+    &__sub-title,
+    &__link {
+        margin-top: 8px;
+        color: var(--text-body-on-dark, #E0E0E0);
+        font-family: @var-mainFont;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 126%;
+    }
+
+    &__link {
+        border-bottom: 1px solid #fff;
+    }
+}
+
+.container-page-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}

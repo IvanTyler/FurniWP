@@ -1,0 +1,48 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.payment {
+
+    &__body {
+        display: grid;
+        grid-template-columns: 192px 1fr;
+        justify-content: space-between;
+        padding: 56px;
+        gap: 96px;
+        border-radius: 20px;
+        border: 2px solid #E4E8F7;
+        background-color: #EFF2FD;
+
+        @media (max-width: 800px) {
+            gap: 50px;
+        }
+
+        @media (max-width: 730px) {
+            grid-template-columns: 1fr;
+            gap: 16px;
+            padding: 32px 20px;
+        }
+
+    }
+
+    &__title {
+        .title();
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    &__paragraph,
+    &__text {
+        color: #262830;
+        font-family: @var-mainFont;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 126%;
+    }
+}
+
+.container-payment {}

@@ -58,7 +58,8 @@ function progressStoris(number) {
         return
     }
 }
-progressStoris(0)
+
+if ($slider) progressStoris(0)
 
 
 function nextSlide() {
@@ -181,7 +182,8 @@ function setCurrentWidtSlider(index) {
 function rollSlider() {
     $slider.style.transform = 'translate(-' + width + 'px)'
 }
-window.addEventListener('resize', rollSlider)
+
+if ($slider) window.addEventListener('resize', rollSlider)
 
 $our_projects_open_modal?.forEach((el, i) => {
     el.addEventListener('click', () => {

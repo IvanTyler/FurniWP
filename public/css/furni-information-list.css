@@ -47,6 +47,12 @@
 .furni-information-list {
   margin-top: 40px;
 }
+.furni-information-list__body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 20px;
+}
 .furni-information-list__item {
   display: grid;
   grid-template-columns: 1fr 36px;
@@ -73,8 +79,15 @@
     font-size: 16px;
   }
 }
+.furni-information-list__text.warranty {
+  font-weight: 700;
+  margin-top: 20px;
+}
 .furni-information-list__sub-text {
   display: none;
+}
+.furni-information-list__paragraph,
+.furni-information-list__sub-text {
   grid-area: sub-text;
   color: #262830;
   font-family: 'FuturaPT';
@@ -99,7 +112,9 @@
   background-image: url('../icon/common/plus-white.svg');
 }
 .furni-information-list__toggle-text.active + .furni-information-list__sub-text {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 .furni-information-list__toggle-text.active {
   transform: rotate(-45deg);

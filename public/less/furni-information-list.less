@@ -1,8 +1,15 @@
 @import url('./variables/main-variables.less');
 @import url('./mixins/main.less');
 
-.delivery-faq-list {
+.furni-information-list {
     margin-top: 40px;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        gap: 20px;
+    }
 
     &__item {
         display: grid;
@@ -32,8 +39,17 @@
         }
     }
 
+    &__text.warranty {
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
     &__sub-text {
         display: none;
+    }
+
+    &__paragraph,
+    &__sub-text {
         grid-area: sub-text;
         color: #262830;
         font-family: @var-mainFont;
@@ -60,8 +76,10 @@
         }
     }
 
-    &__toggle-text.active+.delivery-faq-list__sub-text {
-        display: block;
+    &__toggle-text.active+.furni-information-list__sub-text {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
     }
 
     &__toggle-text.active {
