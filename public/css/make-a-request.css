@@ -122,6 +122,9 @@
   border: 2px solid #E4E8F7;
   background-color: #EFF2FD;
 }
+.make-a-request-form__input.error {
+  border: 2px solid #c40f24;
+}
 .make-a-request-form__input.phone {
   padding-left: 52px;
   background-image: url('../../public/img/make-a-request/UAE.png');

@@ -45,8 +45,27 @@
   background-position: 20px center;
 }
 .discuss-your-project-modal {
-  display: flex;
+  display: none;
+  position: relative;
+}
+@media (max-width: 700px) {
+  .discuss-your-project-modal {
+    flex-direction: column;
+  }
+}
+.discuss-your-project-modal__close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
 }
 .discuss-your-project-modal__img {
   border-radius: 24px 0 0 24px;
+}
+@media (max-width: 700px) {
+  .discuss-your-project-modal__img {
+    height: 322px;
+    border-radius: 24px 24px 0 0;
+    object-fit: cover;
+  }
 }

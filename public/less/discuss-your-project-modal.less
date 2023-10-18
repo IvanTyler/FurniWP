@@ -2,9 +2,27 @@
 @import url('./mixins/main.less');
 
 .discuss-your-project-modal {
-    display: flex;
+    display: none;
+    position: relative;
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
+
+    &__close {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        cursor: pointer;
+    }
 
     &__img {
         border-radius: 24px 0 0 24px;
+
+        @media (max-width: 700px) {
+            height: 322px;
+            border-radius: 24px 24px 0 0;
+            object-fit: cover;
+        }
     }
 }

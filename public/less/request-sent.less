@@ -1,0 +1,56 @@
+@import url('./variables/main-variables.less');
+@import url('./mixins/main.less');
+
+.request-sent {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 16px;
+    border-radius: 20px;
+    background-color: #11172E;
+    box-shadow: 0 8px 48px 0px rgba(0, 0, 0, 0.12);
+    max-width: 682px;
+    width: 100%;
+    height: 508px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (max-width: 530px) {
+        height: 286px;
+    }
+
+    &__title {
+        .title();
+        font-size: 32px;
+        color: #fff;
+        text-align: center;
+    }
+
+    &__sub-title {
+        margin-top: 12px;
+        color: #E0E0E0;
+        text-align: center;
+        font-family: @var-mainFont;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 126%;
+    }
+
+    &__close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        cursor: pointer;
+    }
+}
+
+.request-sent.thanks-for-choosing-us {
+    background-image: url('../img/modal-imgs/request-sent.png');
+}
+
+.request-sent.happy-shopping {
+    background-image: url('../img/modal-imgs/shopping-list.png');
+}

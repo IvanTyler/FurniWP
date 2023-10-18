@@ -78,7 +78,7 @@
                         </ul>
                     </li>
                     <li class="header-nav-menu__item">
-                        <button class="header__request mobile">Request now</button>
+                        <button id="request_now_mobile" class="header__request mobile">Request now</button>
                     </li>
                     <li class="header-nav-menu__item show-select-language">
                         <ul class="social-media">
@@ -104,7 +104,7 @@
                     </li>
                 </ul>
                 <div id="sandwich" class="header__sandwich" alt="sandwich"></div>
-                <button class="header__request">Request now</button>
+                <button id="request_now" class="header__request">Request now</button>
             </div>
         </header>
         <main class="main design-project">
@@ -327,12 +327,12 @@
                     <h2 class="make-a-request__title design-project-title">Make a request</h2>
                     <h3 class="make-a-request__sub-title design-project-sub-title">We'll call you back from 9am to 9pm
                     </h3>
-                    <form action="" class="make-a-request-form">
-                        <input type="text" placeholder="Name" class="make-a-request-form__input design-project-input">
-                        <input type="text" placeholder="+ 971 (585) 029 – 099"
+                    <form action="" id="make-a-request-form-white" class="make-a-request-form">
+                        <input type="text" id="make-request-form_white_name" placeholder="Name" class="make-a-request-form__input design-project-input">
+                        <input type="text" id="make-request-form_white_phone" placeholder="+ 971 (585) 029 – 099"
                             class="make-a-request-form__input design-project-input phone">
-                        <input type="text" placeholder="Email" class="make-a-request-form__input design-project-input">
-                        <input type="text" placeholder="When should we call you?"
+                        <input type="text" id="make-request-form_white_email" placeholder="Email" class="make-a-request-form__input design-project-input">
+                        <input type="text" id="make-request-form_white_call" placeholder="When should we call you?"
                             class="make-a-request-form__input design-project-input">
                         <button class="make-a-request-form__button">
                             Make a request
@@ -431,9 +431,13 @@
     </div>
 
     <div class="modal-main">
+        <img src="/public/img/our-projects/close.svg" alt="close" class="modal-main__close">
         <div class="container container-modal">
             <section class="discuss-your-project-modal">
-                <img src="/public/img/modal-imgs/discuss-your-project.png" alt="" class="discuss-your-project-modal__img">
+                <img id="close-form-discuss-your-project" src="/public/icon/common/close-gray.svg" alt="close-modal"
+                    class="discuss-your-project-modal__close">
+                <img src="/public/img/modal-imgs/discuss-your-project.png" alt="discuss-your-project"
+                    class="discuss-your-project-modal__img">
                 <form action="" class="discuss-your-project-form">
                     <h2 class="discuss-your-project-form__title">
                         Discuss your project
@@ -441,12 +445,33 @@
                     <h3 class="discuss-your-project-form__sub-title">
                         We'll call you back from 9am to 9pm
                     </h3>
-                    <input type="text" placeholder="name" class="discuss-your-project-form__input">
-                    <input type="text" placeholder="+ 971 (585) 029 – 099" class="discuss-your-project-form__input phone">
+                    <input id="input-name-your-project" type="text" placeholder="name"
+                        class="discuss-your-project-form__input">
+                    <input id="input-phone-your-project" type="text" placeholder="+ 971 (585) 029 – 099"
+                        class="discuss-your-project-form__input phone">
                     <button class="discuss-your-project-form__button">
                         Request a call
                     </button>
                 </form>
+            </section>
+            <section class="request-sent thanks-for-choosing-us">
+                <img src="/public/icon/common/close-gray.svg" alt="close-modal" class="request-sent__close">
+                <h2 class="request-sent__title">
+                    Thanks for choosing us!
+                </h2>
+                <h3 class="request-sent__sub-title">
+                    Our team will be in touch with you shortly
+                </h3>
+            </section>
+            <section class="request-sent happy-shopping">
+                <img src="/public/icon/common/close-gray.svg" alt="close-modal" class="request-sent__close">
+                <h2 class="request-sent__title">
+                    Happy shopping!
+                </h2>
+                <h3 class="request-sent__sub-title">
+                    We've sent a shopping list for you. If you need help, just tell us.
+                    We would be delighted to create a personalized furnishing project for you
+                </h3>
             </section>
         </div>
     </div>

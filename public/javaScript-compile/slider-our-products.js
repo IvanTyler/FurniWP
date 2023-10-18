@@ -11,10 +11,6 @@ const $slider_switch_progress_items = document.querySelectorAll('.our-projects-s
 const $our_projects_videos = document.querySelectorAll('.our-projects-video')
 const $our_projects_open_modal = document.querySelectorAll('.our-projects-slider__button')
 
-const $modal_main = document.querySelector('.modal-main')
-const $close_modal_main = document.querySelector('.modal-main__close')
-
-
 let count = 0;
 let width = 0;
 
@@ -192,10 +188,7 @@ $our_projects_open_modal?.forEach((el, i) => {
     })
 })
 
-$close_modal_main?.addEventListener('click', () => {
-    $our_projects_open_modal?.forEach((el, i) => {
-        $our_projects_videos[i].style.display = 'none'
-        $modal_main.style.display = 'none'
-    })
-})
+
+
+
 
