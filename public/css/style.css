@@ -2981,6 +2981,9 @@ body {
   border: 2px solid #D8DEF3;
   background-color: #FFF;
 }
+.form-get-shopping-list-free__input.error {
+  border: 2px solid #c40f24;
+}
 .form-get-shopping-list-free__input.phone {
   padding-left: 52px;
   background-image: url('../../public/img/make-a-request/UAE.png');
