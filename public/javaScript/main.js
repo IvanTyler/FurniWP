@@ -42,19 +42,32 @@ const $close_happy_shopping = document.querySelector('#close-modal-happy-shoppin
 const $happy_shopping = document.querySelector('.request-sent.happy-shopping')
 
 
-const $make_request_form_black = document.querySelector('#make-a-request-form-black')
-const $make_request_form_white = document.querySelector('#make-a-request-form-white')
 
+const $make_request_form_black = document.querySelector('#make-a-request-form-black')
 const $make_request_form_black_name = document.querySelector('#make-request-form_black_name')
 const $make_request_form_black_phone = document.querySelector('#make-request-form_black_phone')
 const $make_request_form_black_email = document.querySelector('#make-request-form_black_email')
 const $make_request_form_black_call = document.querySelector('#make-request-form_black_call')
+const $make_request_form_white = document.querySelector('#make-a-request-form-white')
 
 const $make_request_form_white_name = document.querySelector('#make-request-form_white_name')
 const $make_request_form_white_phone = document.querySelector('#make-request-form_white_phone')
 const $make_request_form_white_email = document.querySelector('#make-request-form_white_email')
 const $make_request_form_white_call = document.querySelector('#make-request-form_white_call')
 
+const input = document.querySelector("#make-request-form_black_phone");
+window.intlTelInput($make_request_form_black_phone, {
+    autoInsertDialCode: true,
+    autoPlaceholder: "aggressive",
+    geoIpLookup: function (callback) {
+        fetch("https://ipapi.co/json")
+            .then(function (res) { return res.json(); })
+            .then(function (data) { callback(data.country_code); })
+            .catch(function () { callback("us"); });
+    },
+    initialCountry: "AE",
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+});
 
 $discuss_your_project_form?.addEventListener('submit', (event) => {
     event.preventDefault()
@@ -329,7 +342,6 @@ function progressStoris(number) {
                 nextSlide()
                 rollSlider()
                 progressStoris(count)
-
             }
         }, 30 * i)
         currentIndexs.push(index)
@@ -372,6 +384,19 @@ function prevSlide() {
             currentElement = el.previousElementSibling
         }
     })
+    currentElement.classList.add('active');
+}
+
+function switchSlides(currentElementSibling) {
+    let currentElement;
+
+    $slide_items.forEach((el, i) => {
+        if (el.classList.contains('active')) {
+            el.classList.remove('active')
+            currentElement = el.nextElementSibling
+        }
+    })
+
     currentElement.classList.add('active');
 }
 

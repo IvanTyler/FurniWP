@@ -37,7 +37,6 @@ function progressStoris(number) {
                 nextSlide()
                 rollSlider()
                 progressStoris(count)
-
             }
         }, 30 * i)
         currentIndexs.push(index)
@@ -80,6 +79,19 @@ function prevSlide() {
             currentElement = el.previousElementSibling
         }
     })
+    currentElement.classList.add('active');
+}
+
+function switchSlides(currentElementSibling) {
+    let currentElement;
+
+    $slide_items.forEach((el, i) => {
+        if (el.classList.contains('active')) {
+            el.classList.remove('active')
+            currentElement = el.nextElementSibling
+        }
+    })
+
     currentElement.classList.add('active');
 }
 

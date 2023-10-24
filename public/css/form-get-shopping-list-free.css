@@ -40,7 +40,6 @@
 }
 .input-phone {
   padding-left: 52px;
-  background-image: url('../../public/img/make-a-request/UAE.png');
   background-repeat: no-repeat;
   background-position: 20px center;
 }
@@ -76,12 +75,6 @@
 .form-get-shopping-list-free__input.error {
   border: 2px solid #c40f24;
 }
-.form-get-shopping-list-free__input.phone {
-  padding-left: 52px;
-  background-image: url('../../public/img/make-a-request/UAE.png');
-  background-repeat: no-repeat;
-  background-position: 20px center;
-}
 .form-get-shopping-list-free__button {
   display: flex;
   align-items: center;
@@ -98,4 +91,7 @@
   height: 64px;
   color: #fff;
   background-color: #CE1A30;
+}
+.iti--allow-dropdown {
+  width: 100%;
 }
