@@ -2,6 +2,7 @@
 @import url('./mixins/main.less');
 
 .make-a-request {
+    position: relative;
     background-color: #0E0F12;
 
     &__title {
@@ -68,7 +69,7 @@
         border: 2px solid #E4E8F7;
         background-color: #EFF2FD;
     }
-    
+
     &__input.error {
         border: 2px solid #c40f24;
     }
@@ -82,6 +83,21 @@
         .button();
         margin-top: 16px;
         background-color: @var-mainColor;
+        color: #fff;
+    }
+
+    &__message-error {
+        position: absolute;
+        bottom: 30px;
+        display: none;
+        max-width: 240px;
+        padding: 9px 20px;
+        background-color: @var-mainColor;
+        border-radius: 12px;
+        font-family: @var-mainFont;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
         color: #fff;
     }
 }

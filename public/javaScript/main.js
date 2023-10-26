@@ -41,24 +41,24 @@ const $close_happy_shopping = document.querySelector('#close-modal-happy-shoppin
 
 const $happy_shopping = document.querySelector('.request-sent.happy-shopping')
 
-
+const $make_request_form_error_message = document.querySelector('.make-a-request-form__message-error')
 
 const $make_request_form_black = document.querySelector('#make-a-request-form-black')
 const $make_request_form_black_name = document.querySelector('#make-request-form_black_name')
-const $make_request_form_black_phone = document.querySelector('#make-request-form_black_phone')
+const $make_request_form_black_phone = document.querySelector('.make-a-request-form__input.phone')
 const $make_request_form_black_email = document.querySelector('#make-request-form_black_email')
 const $make_request_form_black_call = document.querySelector('#make-request-form_black_call')
-const $make_request_form_white = document.querySelector('#make-a-request-form-white')
 
+const $make_request_form_white = document.querySelector('#make-a-request-form-white')
 const $make_request_form_white_name = document.querySelector('#make-request-form_white_name')
 const $make_request_form_white_phone = document.querySelector('#make-request-form_white_phone')
 const $make_request_form_white_email = document.querySelector('#make-request-form_white_email')
 const $make_request_form_white_call = document.querySelector('#make-request-form_white_call')
 
-const input = document.querySelector("#make-request-form_black_phone");
 window.intlTelInput($make_request_form_black_phone, {
     autoInsertDialCode: true,
     autoPlaceholder: "aggressive",
+    separateDialCode: true,
     geoIpLookup: function (callback) {
         fetch("https://ipapi.co/json")
             .then(function (res) { return res.json(); })
@@ -68,6 +68,21 @@ window.intlTelInput($make_request_form_black_phone, {
     initialCountry: "AE",
     utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
 });
+
+window.intlTelInput($input_phone_your_project, {
+    autoInsertDialCode: true,
+    autoPlaceholder: "aggressive",
+    separateDialCode: true,
+    geoIpLookup: function (callback) {
+        fetch("https://ipapi.co/json")
+            .then(function (res) { return res.json(); })
+            .then(function (data) { callback(data.country_code); })
+            .catch(function () { callback("us"); });
+    },
+    initialCountry: "AE",
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+});
+
 
 $discuss_your_project_form?.addEventListener('submit', (event) => {
     event.preventDefault()
@@ -125,52 +140,153 @@ $form_get_shopping?.addEventListener('submit', (event) => {
     }
 })
 
+function errorMessageInput(input, showErrorMessge, errorMessage) {
+    input.classList.add('error')
+    $make_request_form_error_message.style.display = showErrorMessge
+    $make_request_form_error_message.innerText = errorMessage;
+}
+
 $make_request_form_black?.addEventListener('submit', (event) => {
     event.preventDefault()
-    requestDataUser(
-        event.target,
-        $make_request_form_black_name,
-        $make_request_form_black_phone,
-        $make_request_form_black_email,
-        $make_request_form_black_call
-    )
+    const formData = Object.fromEntries(new FormData(event.target))
+
+    if (!$make_request_form_black_name.value) {
+        errorMessageInput($make_request_form_black_name, 'inline-block', 'Enter name')
+    } else {
+        $make_request_form_black_name.classList.remove('error')
+    }
+
+    if (!$make_request_form_black_phone.value) {
+        errorMessageInput($make_request_form_black_phone, 'inline-block', 'Enter phone')
+    } else {
+        $make_request_form_black_phone.classList.remove('error')
+    }
+
+    if (!$make_request_form_black_email.value) {
+        errorMessageInput($make_request_form_black_email, 'inline-block', 'Enter email')
+    } else {
+        $make_request_form_black_email.classList.remove('error')
+    }
+
+    if (!$make_request_form_black_call.value) {
+        errorMessageInput($make_request_form_black_call, 'inline-block', 'Enter your message')
+    } else {
+        $make_request_form_black_call.classList.remove('error')
+    }
+
+
+    if (!$make_request_form_black_name.value && !$make_request_form_black_phone.value) {
+        $make_request_form_error_message.innerText = 'Enter required fields';
+        $make_request_form_error_message.style.display = 'inline-block'
+    }
+
+    if (!$make_request_form_black_email.value && !$make_request_form_black_call.value) {
+        $make_request_form_error_message.innerText = 'Enter required fields';
+        $make_request_form_error_message.style.display = 'inline-block'
+    }
+
+    if (($make_request_form_black_call.value) && ($make_request_form_black_email.value) &&
+        ($make_request_form_black_phone.value) && ($make_request_form_black_name.value)) {
+
+        $make_request_form_black_call.classList.remove('error')
+        $make_request_form_black_email.classList.remove('error')
+        $make_request_form_black_phone.classList.remove('error')
+        $make_request_form_black_name.classList.remove('error')
+        $make_request_form_error_message.style.display = 'none'
+
+        $make_request_form_black.reset();
+        $modal_main.style.display = 'block'
+        $request_sent_happy_shopping.style.display = 'flex';
+
+        const application = {
+            ...formData,
+        }
+
+        console.log(application);
+
+    }
+
 })
 
 $make_request_form_white?.addEventListener('submit', (event) => {
     event.preventDefault()
-    requestDataUser(
-        event.target,
-        $make_request_form_white_name,
-        $make_request_form_white_phone,
-        $make_request_form_white_email,
-        $make_request_form_white_call
-    )
-})
+    const formData = Object.fromEntries(new FormData(event.target))
 
-function requestDataUser(target, ...args) {
-    const elemntsForm = [...args]
-    const formData = Object.fromEntries(new FormData(target))
+    if (!$make_request_form_white_name.value) {
+        errorMessageInput($make_request_form_white_name, 'inline-block', 'Enter name')
+    } else {
+        $make_request_form_white_name.classList.remove('error')
+    }
 
-    elemntsForm.forEach((el) => {
-        if (!el.value) {
-            el.classList.add('error')
-        } else {
-            el.classList.remove('error')
-            el.value = ''
-            $modal_main.style.display = 'block'
-            $request_sent_choosing_us.style.display = 'flex';
+    if (!$make_request_form_white_phone.value) {
+        errorMessageInput($make_request_form_white_phone, 'inline-block', 'Enter phone')
+    } else {
+        $make_request_form_white_phone.classList.remove('error')
+    }
 
-            const application = {
-                id: Date.now(),
-                ...formData,
-            }
+    if (!$make_request_form_white_email.value) {
+        errorMessageInput($make_request_form_white_email, 'inline-block', 'Enter email')
+    } else {
+        $make_request_form_white_email.classList.remove('error')
+    }
+
+    if (!$make_request_form_white_call.value) {
+        errorMessageInput($make_request_form_white_call, 'inline-block', 'Enter your message')
+    } else {
+        $make_request_form_white_call.classList.remove('error')
+    }
+
+
+    if (!$make_request_form_white_name.value && !$make_request_form_white_phone.value) {
+        $make_request_form_error_message.innerText = 'Enter required fields';
+        $make_request_form_error_message.style.display = 'inline-block'
+    }
+
+    if (!$make_request_form_white_email.value && !$make_request_form_white_call.value) {
+        $make_request_form_error_message.innerText = 'Enter required fields';
+        $make_request_form_error_message.style.display = 'inline-block'
+    }
+
+    if (($make_request_form_white_call.value) && ($make_request_form_white_email.value) &&
+        ($make_request_form_white_phone.value) && ($make_request_form_white_name.value)) {
+
+        $make_request_form_white_call.classList.remove('error')
+        $make_request_form_white_email.classList.remove('error')
+        $make_request_form_white_phone.classList.remove('error')
+        $make_request_form_white_name.classList.remove('error')
+        $make_request_form_error_message.style.display = 'none'
+
+        $make_request_form_white.reset();
+        $modal_main.style.display = 'block'
+        $request_sent_happy_shopping.style.display = 'flex';
+
+        const application = {
+            ...formData,
         }
-    })
 
-}
+        console.log(application);
+
+    }
+})
 
 $close_choosing_us?.addEventListener('click', () => closeMainModal())
 $close_happy_shopping?.addEventListener('click', () => closeMainModal())
+
+$make_request_form_black_name?.addEventListener('input', (event) => {
+    if (event.target.value.length > 50) {
+        $make_request_form_black_name.classList.add('error')
+        $make_request_form_error_message.style.display = 'inline-block'
+        $make_request_form_error_message.innerText = 'Full name must be up to 50 characters'
+    }
+    validCountSymbolsInput(event, 50)
+})
+$make_request_form_black_phone?.addEventListener('input', (event) => validCountSymbolsInput(event, 12))
+$make_request_form_black_email?.addEventListener('input', (event) => validCountSymbolsInput(event, 30))
+
+
+function validCountSymbolsInput(event, countSymbols) {
+    if (event.target.value.length > countSymbols) event.target.value = event.target.value.slice(0, countSymbols);
+}
 const $header = document.querySelector('.header')
 
 const $modal_main = document.querySelector('.modal-main')
@@ -191,9 +307,12 @@ window.addEventListener('scroll', () => {
 
 
 let parent = document.querySelector('.container-modal');
-let elems_modal = parent.children;
-for (let i = 0; i < elems_modal.length; i++) {
-    elems_modal[i].addEventListener('click', (e) => e.stopPropagation())
+let elems_modal = parent?.children;
+
+if (elems_modal) {
+    for (let i = 0; i < elems_modal.length; i++) {
+        elems_modal[i].addEventListener('click', (e) => e.stopPropagation())
+    }
 }
 
 $close_modal_main?.addEventListener('click', () => {

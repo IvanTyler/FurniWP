@@ -961,17 +961,20 @@
                     <h2 class="make-a-request__title">Make a request</h2>
                     <h3 class="make-a-request__sub-title">We'll call you back from 9am to 9pm</h3>
                     <form action="" id="make-a-request-form-black" class="make-a-request-form">
-                        <input type="text" id="make-request-form_black_name" placeholder="Name"
+                        <input type="text" name="name" id="make-request-form_black_name" placeholder="Name"
                             class="make-a-request-form__input">
-                        <input type="text" id="make-request-form_black_phone" placeholder="+ 971 (585) 029 – 099"
+                        <input type="number" name="phone" id="make-request-form_black_phone" placeholder="+ 971 (585) 029 – 099"
                             class="make-a-request-form__input phone">
-                        <input type="text" id="make-request-form_black_email" placeholder="Email"
+                        <input type="email" name="email" id="make-request-form_black_email" placeholder="Email"
                             class="make-a-request-form__input">
-                        <input type="text" id="make-request-form_black_call" placeholder="When should we call you?"
+                        <input type="text" name="call" id="make-request-form_black_call" placeholder="When should we call you?"
                             class="make-a-request-form__input">
                         <button class="make-a-request-form__button">
                             Make a request
                         </button>
+
+                        <div class="make-a-request-form__message-error">
+                        </div>
                     </form>
                 </div>
             </section>
@@ -1069,7 +1072,7 @@
     <div class="modal-main">
         <img src="/public/img/our-projects/close.svg" alt="close" class="modal-main__close">
         <div class="container container-modal">
-            <iframe class="our-projects-video" src="https://www.youtube.com/embed/TeE0KoZ5w7g?si=j6MVSRpik4_CxtI6"
+            <!-- <iframe class="our-projects-video" src="https://www.youtube.com/embed/TeE0KoZ5w7g?si=j6MVSRpik4_CxtI6"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
@@ -1084,7 +1087,7 @@
             <iframe class="our-projects-video" src="https://www.youtube.com/embed/ejMMMiHt3Nk?si=4Xky6deN4G9Mij3z"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+                allowfullscreen></iframe> -->
 
             <section class="discuss-your-project-modal">
                 <img id="close-form-discuss-your-project" src="/public/icon/common/close-gray.svg" alt="close-modal"

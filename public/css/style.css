@@ -101,6 +101,10 @@ body {
   font-weight: 500;
   line-height: 126%;
 }
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 .input-phone {
   padding-left: 52px;
   background-repeat: no-repeat;
@@ -185,6 +189,10 @@ body {
   border: 2px solid #E4E8F7;
   background-color: #EFF2FD;
 }
+.discuss-your-project-form__input::-webkit-outer-spin-button,
+.discuss-your-project-form__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 .discuss-your-project-form__input:first-of-type {
   margin-top: 28px;
 }
@@ -215,6 +223,9 @@ body {
   cursor: pointer;
   background-color: #CE1A30;
   color: #fff;
+}
+.discuss-your-project-form .iti--allow-dropdown {
+  margin-top: 16px;
 }
 .header {
   position: fixed;
@@ -2979,6 +2990,10 @@ body {
   border: 2px solid #D8DEF3;
   background-color: #FFF;
 }
+.form-get-shopping-list-free__input::-webkit-outer-spin-button,
+.form-get-shopping-list-free__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 .form-get-shopping-list-free__input.error {
   border: 2px solid #c40f24;
 }
@@ -3001,6 +3016,21 @@ body {
 }
 .iti--allow-dropdown {
   width: 100%;
+}
+.iti__selected-flag {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.iti__arrow {
+  display: none;
+}
+.iti--separate-dial-code.iti--show-flags .iti__selected-dial-code {
+  margin-left: 12px;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #8B8B9E;
 }
 .gallery__title {
   color: #11172E;
@@ -3740,6 +3770,7 @@ body {
   background-image: url('../icon/common/plus-white.svg');
 }
 .make-a-request {
+  position: relative;
   background-color: #0E0F12;
 }
 .make-a-request__title {
@@ -3806,6 +3837,10 @@ body {
   background-color: #262830;
   color: #8B8B9E;
 }
+.make-a-request-form__input::-webkit-outer-spin-button,
+.make-a-request-form__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 .make-a-request-form__input::placeholder {
   color: #8B8B9E;
   font-family: 'FuturaPT';
@@ -3840,6 +3875,20 @@ body {
   cursor: pointer;
   margin-top: 16px;
   background-color: #CE1A30;
+  color: #fff;
+}
+.make-a-request-form__message-error {
+  position: absolute;
+  bottom: 30px;
+  display: none;
+  max-width: 240px;
+  padding: 9px 20px;
+  background-color: #CE1A30;
+  border-radius: 12px;
+  font-family: 'FuturaPT';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
   color: #fff;
 }
 .page-not-found {

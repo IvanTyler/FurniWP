@@ -38,6 +38,10 @@
   font-weight: 500;
   line-height: 126%;
 }
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 .input-phone {
   padding-left: 52px;
   background-repeat: no-repeat;
@@ -97,6 +101,10 @@
   border: 2px solid #E4E8F7;
   background-color: #EFF2FD;
 }
+.discuss-your-project-form__input::-webkit-outer-spin-button,
+.discuss-your-project-form__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 .discuss-your-project-form__input:first-of-type {
   margin-top: 28px;
 }
@@ -127,4 +135,7 @@
   cursor: pointer;
   background-color: #CE1A30;
   color: #fff;
+}
+.discuss-your-project-form .iti--allow-dropdown {
+  margin-top: 16px;
 }

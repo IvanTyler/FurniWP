@@ -38,6 +38,10 @@
   font-weight: 500;
   line-height: 126%;
 }
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 .input-phone {
   padding-left: 52px;
   background-repeat: no-repeat;
@@ -72,6 +76,10 @@
   border: 2px solid #D8DEF3;
   background-color: #FFF;
 }
+.form-get-shopping-list-free__input::-webkit-outer-spin-button,
+.form-get-shopping-list-free__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 .form-get-shopping-list-free__input.error {
   border: 2px solid #c40f24;
 }
@@ -94,4 +102,19 @@
 }
 .iti--allow-dropdown {
   width: 100%;
+}
+.iti__selected-flag {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.iti__arrow {
+  display: none;
+}
+.iti--separate-dial-code.iti--show-flags .iti__selected-dial-code {
+  margin-left: 12px;
+  font-family: 'FuturaPT';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #8B8B9E;
 }

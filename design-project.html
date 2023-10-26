@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
+
     <link rel="stylesheet" href="public/css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+
     <script defer src="public/javaScript/main.js"></script>
     <title>FurniWP</title>
 </head>
@@ -329,15 +333,18 @@
                     </h3>
                     <form action="" id="make-a-request-form-white" class="make-a-request-form">
                         <input type="text" id="make-request-form_white_name" placeholder="Name" class="make-a-request-form__input design-project-input">
-                        <input type="text" id="make-request-form_white_phone" placeholder="+ 971 (585) 029 – 099"
+                        <input type="number" id="make-request-form_white_phone" placeholder="+ 971 (585) 029 – 099"
                             class="make-a-request-form__input design-project-input phone">
-                        <input type="text" id="make-request-form_white_email" placeholder="Email" class="make-a-request-form__input design-project-input">
+                        <input type="email" id="make-request-form_white_email" placeholder="Email" class="make-a-request-form__input design-project-input">
                         <input type="text" id="make-request-form_white_call" placeholder="When should we call you?"
                             class="make-a-request-form__input design-project-input">
                         <button class="make-a-request-form__button">
                             Make a request
                         </button>
                     </form>
+
+                    <div class="make-a-request-form__message-error">
+                    </div>
                 </div>
             </section>
         </main>

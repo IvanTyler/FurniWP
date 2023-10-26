@@ -18,9 +18,12 @@ window.addEventListener('scroll', () => {
 
 
 let parent = document.querySelector('.container-modal');
-let elems_modal = parent.children;
-for (let i = 0; i < elems_modal.length; i++) {
-    elems_modal[i].addEventListener('click', (e) => e.stopPropagation())
+let elems_modal = parent?.children;
+
+if (elems_modal) {
+    for (let i = 0; i < elems_modal.length; i++) {
+        elems_modal[i].addEventListener('click', (e) => e.stopPropagation())
+    }
 }
 
 $close_modal_main?.addEventListener('click', () => {
