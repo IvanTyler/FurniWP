@@ -140,9 +140,9 @@ $form_get_shopping?.addEventListener('submit', (event) => {
     }
 })
 
-function errorMessageInput(input, showErrorMessge, errorMessage) {
+function errorMessageInput(input, showErrorMessage, errorMessage) {
     input.classList.add('error')
-    $make_request_form_error_message.style.display = showErrorMessge
+    $make_request_form_error_message.style.display = showErrorMessage
     $make_request_form_error_message.innerText = errorMessage;
 }
 
