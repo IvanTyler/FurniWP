@@ -174,8 +174,6 @@ $make_request_form_black?.addEventListener('submit', (event) => {
             ...formData,
         }
 
-        console.log(application);
-
     }
 
 })
@@ -235,8 +233,6 @@ $make_request_form_white?.addEventListener('submit', (event) => {
         const application = {
             ...formData,
         }
-
-        console.log(application);
 
     }
 })
