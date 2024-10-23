@@ -60,6 +60,9 @@
   background-color: #D8DEF3;
   cursor: pointer;
 }
+.our-projects-slider-switch__item.active {
+  background-color: #B3B9D1;
+}
 .our-projects-slider-switch__progress {
   background-color: #B3B9D1;
   width: 0;
