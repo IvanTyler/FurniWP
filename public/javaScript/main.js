@@ -525,10 +525,10 @@ $next_slide?.addEventListener('click', () => {
     if (count === $slide_items.length - 1) $next_slide.classList.add('hide')
     if (count > 0) $prev_slide.classList.remove('hide')
 
-    // $slider_switch.forEach((el) => {
-    //     el.classList.remove('active')
-    // })
-    // $slider_switch[count].classList.add('active')
+    $slider_switch.forEach((el) => {
+        el.classList.remove('active')
+    })
+    $slider_switch[count].classList.add('active')
 
     nextSlide()
     rollSlider()
@@ -545,10 +545,10 @@ $prev_slide?.addEventListener('click', () => {
     if (count === 0) $prev_slide.classList.add('hide')
     if (count < $slide_items.length - 1) $next_slide.classList.remove('hide')
 
-    // $slider_switch.forEach((el) => {
-    //     el.classList.remove('active')
-    // })
-    // $slider_switch[count].classList.add('active')
+    $slider_switch.forEach((el) => {
+        el.classList.remove('active')
+    })
+    $slider_switch[count].classList.add('active')
 
     prevSlide()
     rollSlider()
@@ -559,10 +559,10 @@ $slide_items?.forEach((el, i) => {
         $slide_items.forEach((el) => {
             el.classList.remove('active')
         })
-        // $slider_switch.forEach((el) => {
-        //     el.classList.remove('active')
-        // })
-        // $slider_switch[i].classList.add('active')
+        $slider_switch.forEach((el) => {
+            el.classList.remove('active')
+        })
+        $slider_switch[i].classList.add('active')
         el.classList.add('active')
         currentIndexs.forEach((el) => clearTimeout(el))
 
@@ -577,11 +577,11 @@ $slider_switch?.forEach((el, i) => {
         $slider_switch.forEach((el) => {
             el.classList.remove('active')
         })
-        // $slide_items.forEach((el) => {
-        //     el.classList.remove('active')
-        // })
+        $slide_items.forEach((el) => {
+            el.classList.remove('active')
+        })
         $slide_items[i].classList.add('active')
-        // el.classList.add('active')
+        el.classList.add('active')
 
         currentIndexs.forEach((el) => clearTimeout(el))
         setCurrentWidtSlider(i)
