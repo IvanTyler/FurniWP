@@ -73,7 +73,7 @@ $discuss_your_project_form?.addEventListener('submit', (event) => {
         $input_phone_your_project.classList.remove('error')
 
         $discuss_your_project_form.reset();
-        $discuss_your_project_modal.style.display = 'none';
+        $discuss_your_project_form.style.display = 'none';
         $request_sent_choosing_us.style.display = 'flex';
 
         const application = {

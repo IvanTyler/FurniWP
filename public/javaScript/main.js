@@ -101,7 +101,7 @@ $discuss_your_project_form?.addEventListener('submit', (event) => {
         $input_phone_your_project.classList.remove('error')
 
         $discuss_your_project_form.reset();
-        $discuss_your_project_modal.style.display = 'none';
+        $discuss_your_project_form.style.display = 'none';
         $request_sent_choosing_us.style.display = 'flex';
 
         const application = {
@@ -426,7 +426,7 @@ const $prev_slide = document.querySelector('.our-projects__arrow.prev-slide')
 const $next_slide = document.querySelector('.our-projects__arrow.next-slide')
 
 const $slider_switch = document.querySelectorAll('.our-projects-slider-switch__item')
-// const $slider_switch_progress_items = document.querySelectorAll('.our-projects-slider-switch__progress')
+const $slider_switch_progress_items = document.querySelectorAll('.our-projects-slider-switch__progress')
 
 const $our_projects_videos = document.querySelectorAll('.our-projects-video')
 const $our_projects_open_modal = document.querySelectorAll('.our-projects-slider__button')
@@ -434,33 +434,33 @@ const $our_projects_open_modal = document.querySelectorAll('.our-projects-slider
 let count = 0;
 let width = 0;
 
-// const currentIndexs = []
+const currentIndexs = []
 
 function progressStoris(number) {
-    // let percentProgress = 100
+    let percentProgress = 100
     count = number
     width = 0
 
-    // $slider_switch_progress_items.forEach((el) => el.style.width = '0%')
+    $slider_switch_progress_items.forEach((el) => el.style.width = '0%')
 
-    // for (let i = 0; i < count; i++) {
-    //     width = width + $slide_item.offsetWidth
-    //     $slider_switch_progress_items[i].style.width = '100%'
-    // }
+    for (let i = 0; i < count; i++) {
+        width = width + $slide_item.offsetWidth
+        $slider_switch_progress_items[i].style.width = '100%'
+    }
 
-    // for (let i = 0; i <= percentProgress; i++) {
-    //     let index = setTimeout(() => {
-    //         $slider_switch_progress_items[count].style.width = `${i}%`
-    //         if (i === percentProgress && count < $slide_items.length - 1) {
-    //             count++
+    for (let i = 0; i <= percentProgress; i++) {
+        let index = setTimeout(() => {
+            $slider_switch_progress_items[count].style.width = `${i}%`
+            if (i === percentProgress && count < $slide_items.length - 1) {
+                count++
 
-    //             nextSlide()
-    //             rollSlider()
-    //             progressStoris(count)
-    //         }
-    //     }, 30 * i)
-    //     currentIndexs.push(index)
-    // }
+                nextSlide()
+                rollSlider()
+                progressStoris(count)
+            }
+        }, 30 * i)
+        currentIndexs.push(index)
+    }
 
     rollSlider()
 
@@ -474,7 +474,7 @@ function progressStoris(number) {
     }
 }
 
-// if ($slider) progressStoris(0)
+if ($slider) progressStoris(0)
 
 
 function nextSlide() {
@@ -519,16 +519,16 @@ $next_slide?.addEventListener('click', () => {
     count++
     width = width + $slide_item.offsetWidth
 
-    // currentIndexs.forEach((el) => clearTimeout(el))
-    // progressStoris(count)
+    currentIndexs.forEach((el) => clearTimeout(el))
+    progressStoris(count)
 
     if (count === $slide_items.length - 1) $next_slide.classList.add('hide')
     if (count > 0) $prev_slide.classList.remove('hide')
 
-    $slider_switch.forEach((el) => {
-        el.classList.remove('active')
-    })
-    $slider_switch[count].classList.add('active')
+    // $slider_switch.forEach((el) => {
+    //     el.classList.remove('active')
+    // })
+    // $slider_switch[count].classList.add('active')
 
     nextSlide()
     rollSlider()
@@ -538,17 +538,17 @@ $prev_slide?.addEventListener('click', () => {
     count--
     width = width - $slide_item.offsetWidth
 
-    // currentIndexs.forEach((el) => clearTimeout(el))
+    currentIndexs.forEach((el) => clearTimeout(el))
 
-    // progressStoris(count)
+    progressStoris(count)
 
     if (count === 0) $prev_slide.classList.add('hide')
     if (count < $slide_items.length - 1) $next_slide.classList.remove('hide')
 
-    $slider_switch.forEach((el) => {
-        el.classList.remove('active')
-    })
-    $slider_switch[count].classList.add('active')
+    // $slider_switch.forEach((el) => {
+    //     el.classList.remove('active')
+    // })
+    // $slider_switch[count].classList.add('active')
 
     prevSlide()
     rollSlider()
@@ -559,15 +559,15 @@ $slide_items?.forEach((el, i) => {
         $slide_items.forEach((el) => {
             el.classList.remove('active')
         })
-        $slider_switch.forEach((el) => {
-            el.classList.remove('active')
-        })
-        $slider_switch[i].classList.add('active')
+        // $slider_switch.forEach((el) => {
+        //     el.classList.remove('active')
+        // })
+        // $slider_switch[i].classList.add('active')
         el.classList.add('active')
-        // currentIndexs.forEach((el) => clearTimeout(el))
+        currentIndexs.forEach((el) => clearTimeout(el))
 
         setCurrentWidtSlider(i)
-        // progressStoris(i)
+        progressStoris(i)
 
     })
 })
@@ -577,15 +577,15 @@ $slider_switch?.forEach((el, i) => {
         $slider_switch.forEach((el) => {
             el.classList.remove('active')
         })
-        $slide_items.forEach((el) => {
-            el.classList.remove('active')
-        })
+        // $slide_items.forEach((el) => {
+        //     el.classList.remove('active')
+        // })
         $slide_items[i].classList.add('active')
-        el.classList.add('active')
+        // el.classList.add('active')
 
-        // currentIndexs.forEach((el) => clearTimeout(el))
+        currentIndexs.forEach((el) => clearTimeout(el))
         setCurrentWidtSlider(i)
-        // progressStoris(i)
+        progressStoris(i)
 
     })
 })
@@ -615,7 +615,7 @@ if ($slider) window.addEventListener('resize', rollSlider)
 
 $our_projects_open_modal?.forEach((el, i) => {
     el.addEventListener('click', () => {
-        // $our_projects_videos[i].style.display = 'block'
+        $our_projects_videos[i].style.display = 'block'
         $modal_main.style.display = 'block'
     })
 })
