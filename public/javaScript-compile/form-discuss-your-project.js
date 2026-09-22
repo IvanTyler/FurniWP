@@ -27,33 +27,37 @@ const $make_request_form_white_phone = document.querySelector('#make-request-for
 const $make_request_form_white_email = document.querySelector('#make-request-form_white_email')
 const $make_request_form_white_call = document.querySelector('#make-request-form_white_call')
 
-window.intlTelInput($make_request_form_black_phone, {
-    autoInsertDialCode: true,
-    autoPlaceholder: "aggressive",
-    separateDialCode: true,
-    geoIpLookup: function (callback) {
-        fetch("https://ipapi.co/json")
-            .then(function (res) { return res.json(); })
-            .then(function (data) { callback(data.country_code); })
-            .catch(function () { callback("us"); });
-    },
-    initialCountry: "AE",
-    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
-});
+if (window.intlTelInput && $make_request_form_black_phone) {
+    window.intlTelInput($make_request_form_black_phone, {
+        autoInsertDialCode: true,
+        autoPlaceholder: "aggressive",
+        separateDialCode: true,
+        geoIpLookup: function (callback) {
+            fetch("https://ipapi.co/json")
+                .then(function (res) { return res.json(); })
+                .then(function (data) { callback(data.country_code); })
+                .catch(function () { callback("us"); });
+        },
+        initialCountry: "AE",
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+    });
+}
 
-window.intlTelInput($input_phone_your_project, {
-    autoInsertDialCode: true,
-    autoPlaceholder: "aggressive",
-    separateDialCode: true,
-    geoIpLookup: function (callback) {
-        fetch("https://ipapi.co/json")
-            .then(function (res) { return res.json(); })
-            .then(function (data) { callback(data.country_code); })
-            .catch(function () { callback("us"); });
-    },
-    initialCountry: "AE",
-    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
-});
+if (window.intlTelInput && $input_phone_your_project) {
+    window.intlTelInput($input_phone_your_project, {
+        autoInsertDialCode: true,
+        autoPlaceholder: "aggressive",
+        separateDialCode: true,
+        geoIpLookup: function (callback) {
+            fetch("https://ipapi.co/json")
+                .then(function (res) { return res.json(); })
+                .then(function (data) { callback(data.country_code); })
+                .catch(function () { callback("us"); });
+        },
+        initialCountry: "AE",
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+    });
+}
 
 
 $discuss_your_project_form?.addEventListener('submit', (event) => {
